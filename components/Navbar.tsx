@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
-    <nav className="w-full py-4 px-6 md:px-8 lg:px-12 flex items-center justify-between">
+    <nav className="w-full py-4 px-6 md:px-8 lg:px-12 flex items-center justify-between bg-[#fff7f8]">
       {/* Logo */}
       <Link href="/" className="text-[#633b3d] font-mabry text-2xl font-black">
         Hirebuddy

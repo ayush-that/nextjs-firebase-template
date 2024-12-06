@@ -19,7 +19,7 @@ export default function Home() {
           src="/hero-image.png"
           alt="Hero illustration"
           fill
-          className="object-contain object-center"
+          className="object-contain object-center bg-[#fff7f8]"
           sizes="(max-width: 640px) 100vw, 
                  (max-width: 768px) 95vw,
                  (max-width: 1024px) 90vw,

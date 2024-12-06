@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 
 const Hero = () => {
   return (
-    <div className="w-full min-h-[80vh] flex flex-col items-center justify-center px-4 bg-[#ffedee]">
+    <div className="w-full min-h-[80vh] flex flex-col items-center justify-center px-4 bg-[#fff7f8]">
       {/* What's new badge */}
       <div className="mb-8">
         <div className="inline-flex items-center rounded-full border border-[#ffe0e0] bg-[#ffe0e0] px-4 py-1.5">
