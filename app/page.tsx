@@ -15,11 +15,13 @@ export default function Home() {
       <Navbar />
       <Hero />
       <div className="relative w-full min-h-[50vh] md:min-h-[70vh] lg:min-h-screen px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="absolute inset-0 w-full h-full bg-[#fff7f8]" />
+        <div className="absolute bottom-0 left-0 w-full h-1/4 bg-[#ffeded]" />
         <Image
           src="/hero-image.png"
           alt="Hero illustration"
           fill
-          className="object-contain object-center bg-[#fff7f8]"
+          className="object-contain object-center"
           sizes="(max-width: 640px) 100vw, 
                  (max-width: 768px) 95vw,
                  (max-width: 1024px) 90vw,

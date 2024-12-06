@@ -46,12 +46,11 @@ const pricingData = [
 
 export default function Pricing() {
   return (
-    <section className="min-h-screen bg-pink-50 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="min-h-screen bg-[#ffedee] py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto m-24">
         <div className="text-center mb-12">
-          <p className="text-red-400 mb-4">The Problem</p>
-          <h2 className="text-4xl font-bold text-gray-900">
-            Plans to boost your <span className="text-red-400">career</span>.
+          <h2 className="text-4xl font-bold text-[#403334]">
+            Plans to boost your <span className="text-[#d35c65]">career</span>.
           </h2>
         </div>
 

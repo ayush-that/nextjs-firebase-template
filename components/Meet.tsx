@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Meet = () => {
   return (
-    <section className="w-full py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]">
+    <section className="pt-36 w-full py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
@@ -18,17 +18,18 @@ const Meet = () => {
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-mabry font-semibold text-[#403334]">
-            Meet <span className="text-[#E75A82]">Hirebuddy</span>
+            Meet <span className="text-[#b24e55]">Hirebuddy</span>
           </h2>
-          <p className="text-lg text-[#4A3D55] max-w-2xl mx-auto">
-            Your personal career companion, making opportunities come to you.
+          <p className="text-xl font-light text-[#4A3D55] max-w-2xl mx-auto">
+            Your personal career companion, making
+            <br /> opportunities come to you.
           </p>
         </div>
 
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {/* Search Card */}
-          <div className="bg-[#E75A82] rounded-3xl p-8 text-center space-y-4">
+          <div className="bg-[#d35c65] rounded-3xl p-8 text-center space-y-4">
             <div className="relative w-full aspect-square max-w-[300px] mx-auto">
               <Image
                 src="/meet/targeted-search.svg"
@@ -40,9 +41,10 @@ const Meet = () => {
             <h3 className="text-3xl font-mabry font-semibold text-white">
               Targeted search
             </h3>
-            <p className="text-white/90 text-sm">
-              Our algorithm finds and matches you with jobs that suit your
-              skills and preferences from across the web.
+            <p className="text-white/90 text-base font-light">
+              Our algorithm finds and matches you
+              <br /> with jobs that suit your skills and
+              <br /> preferences from across the web.
             </p>
           </div>
 
@@ -59,14 +61,15 @@ const Meet = () => {
             <h2 className="text-3xl font-mabry font-semibold text-[#403334]">
               Apply effortlessly
             </h2>
-            <p className="text-[#4A3D55] text-sm">
-              Apply to multiple jobs with a single click. We handle the
-              application process, so you don't have to.
+            <p className="font-light text-[#403334] text-base">
+              Apply to multiple jobs with a single <br />
+              click. We handle the application <br />
+              process, so you don't have to.
             </p>
           </div>
 
           {/* CVs Card */}
-          <div className="bg-[#E75A82] rounded-3xl p-8 text-center space-y-4">
+          <div className="bg-[#d35c65] rounded-3xl p-8 text-center space-y-4">
             <div className="relative w-full aspect-square max-w-[300px] mx-auto">
               <Image
                 src="/meet/tailored-svg.svg"
@@ -78,9 +81,9 @@ const Meet = () => {
             <h3 className="text-3xl font-mabry font-semibold text-white">
               Tailored CVs
             </h3>
-            <p className="text-white/90 text-sm">
-              Get professionally tailored CVs and cover letters that make your
-              applications stand out.
+            <p className="text-white/90 text-base font-light">
+              Get professionally tailored CVs and cover letters
+              <br /> that make your applications stand out.
             </p>
           </div>
         </div>
@@ -88,7 +91,7 @@ const Meet = () => {
         {/* Bottom Section with Bento Filler */}
         <div className="flex flex-col md:flex-row gap-6 items-stretch">
           {/* Email Card */}
-          <div className="flex-1 bg-[#E75A82] rounded-3xl p-8 text-center space-y-4">
+          <div className="flex-1 bg-white rounded-3xl p-8 text-center space-y-4">
             <div className="relative w-full aspect-square max-w-[300px] mx-auto">
               <Image
                 src="/meet/personalized-email.svg"
@@ -97,12 +100,13 @@ const Meet = () => {
                 className="object-contain"
               />
             </div>
-            <h3 className="text-3xl font-mabry font-semibold text-white">
+            <h3 className="text-3xl font-mabry font-semibold text-[#403334]">
               Personalized Emails
             </h3>
-            <p className="text-white/90 text-sm">
-              We send personalized cold emails to recruiters on your behalf,
-              increasing your chances of getting noticed.
+            <p className="text-[#403334] font-light text-base">
+              We send personalized cold emails to
+              <br /> recruiters on your behalf, increasing your
+              <br /> chances of getting noticed.
             </p>
           </div>
 
@@ -132,16 +136,17 @@ const Meet = () => {
             <h3 className="text-3xl font-mabry font-semibold text-[#403334]">
               Application Tracking
             </h3>
-            <p className="text-[#4A3D55] text-sm">
-              Stay updated with real-time notifications and status updates for
-              all your job applications.
+            <p className="text-[#4A3D55] text-base font-light">
+              Stay updated with real-time notifications
+              <br /> and status updates for all your job
+              <br /> applications.
             </p>
           </div>
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-12">
-          <Button className="h-14 px-8 text-xl font-normal rounded-md bg-gradient-to-r from-[#E75A82] to-[#E3405F] hover:opacity-90 text-white">
+        <div className="text-center p-16">
+          <Button className="h-14 px-8 text-xl font-normal rounded-md bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white">
             Try Hirebuddy for free
             <svg
               width="24"
