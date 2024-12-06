@@ -59,7 +59,7 @@ export default function Pricing() {
             <div
               key={plan.tier}
               className={`rounded-3xl p-8 ${
-                plan.popular ? "bg-red-400" : "bg-pink-100"
+                plan.popular ? "bg-red-400" : "bg-[#fccbcd]"
               } relative`}
             >
               {plan.popular && (
@@ -93,7 +93,7 @@ export default function Pricing() {
                     <div
                       className={`
                       w-6 h-6 rounded-full flex items-center justify-center mr-3
-                      ${plan.popular ? "bg-white/20" : "bg-red-200"}
+                      ${plan.popular ? "bg-white/20" : "bg-[red-200]"}
                     `}
                     >
                       <svg
