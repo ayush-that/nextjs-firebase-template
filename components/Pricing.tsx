@@ -146,7 +146,7 @@ export default function Pricing() {
               <button
                 className={`w-full py-3 px-6 rounded-lg font-medium ${
                   plan.popular
-                    ? "bg-white text-[#e17377]"
+                    ? " bg-gradient-to-t from-[#f9b6bc] to-[#fffcfd] text-[#8f5055]"
                     : "bg-[#e17377] text-white hover:bg-[#d66267]"
                 } transition-colors duration-200`}
               >

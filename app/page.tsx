@@ -9,6 +9,7 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
+import Testimonials from "@/components/Testimonials";
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -32,6 +33,7 @@ export default function Home() {
       <Problem />
       <Solution />
       <Meet />
+      <Testimonials />
       <Working />
       <Pricing />
       <FAQ />
