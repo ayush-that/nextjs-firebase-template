@@ -35,18 +35,18 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]">
+    <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left side */}
           <div className="space-y-6">
-            <div className="inline-flex items-center rounded-full bg-[#FFE0E0] px-4 py-1.5">
-              <span className="text-sm font-medium text-[#4A3D55]">FAQs</span>
+            <div className="inline-flex items-center rounded-full bg-[#ffe0e0] px-4 py-1.5">
+              <span className="text-sm font-medium text-[#b26469]">FAQs</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-mabry font-semibold text-[#403334]">
+            <h2 className="text-4xl md:text-5xl font-mabry font-semibold text-[#b26469]">
               All the A's to your Q's
             </h2>
-            <p className="text-xl text-[#4A3D55]">We got you covered.</p>
+            <p className="text-xl text-[#b26469]">We got you covered.</p>
             <div className="relative w-full aspect-square max-w-[500px]">
               <Image
                 src="/girl.png"
