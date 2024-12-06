@@ -76,6 +76,11 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      borderWidth: {
+        '12': '12px',
+        '16': '16px',
+        '20': '20px',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

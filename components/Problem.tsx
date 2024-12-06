@@ -19,7 +19,7 @@ const Problem = () => {
           {/* Right side - Content */}
           <div className="space-y-8">
             <div className="inline-flex items-center rounded-full bg-[#FFE0E0] px-4 py-1.5">
-              <span className="text-sm font-medium text-[#4A3D55]">
+              <span className="text-sm font-medium text-[#b26469]">
                 The Problem
               </span>
             </div>
@@ -27,8 +27,8 @@ const Problem = () => {
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-mabry font-semibold text-[#403334]">
                 Hunting for roles manually can be{" "}
-                <span className="text-[#E75A82]">stressful</span> and{" "}
-                <span className="text-[#E75A82]">time-consuming</span>.
+                <span className="text-[#b24e55]">stressful</span> and{" "}
+                <span className="text-[#b24e55]">time-consuming</span>.
               </h2>
 
               <div className="space-y-6">
@@ -42,7 +42,9 @@ const Problem = () => {
                       height={24}
                     />
                   </div>
-                  <p className="text-lg text-[#403334]">
+                  <p
+                    className="text-lg font-light text-[#403334]"
+                  >
                     Manually applying for roles at multiple places is
                     frustrating.
                   </p>
@@ -57,7 +59,7 @@ const Problem = () => {
                       height={24}
                     />
                   </div>
-                  <p className="text-lg text-[#403334]">
+                  <p className="text-lg font-light text-[#403334]">
                     Customizing applications repeatedly is time-consuming.
                   </p>
                 </div>
@@ -71,7 +73,7 @@ const Problem = () => {
                       height={24}
                     />
                   </div>
-                  <p className="text-xl text-[#403334]">
+                  <p className="text-lg font-light text-[#403334]">
                     Facing constant rejections can lower your confidence.
                   </p>
                 </div>
