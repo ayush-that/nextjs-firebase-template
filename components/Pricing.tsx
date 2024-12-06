@@ -49,7 +49,7 @@ export default function Pricing() {
     <section className="min-h-screen bg-[#ffedee] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto m-24">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#403334]">
+          <h2 className="text-4xl font-bold text-[#574547]">
             Plans to boost your <span className="text-[#d35c65]">career</span>.
           </h2>
         </div>
@@ -59,11 +59,15 @@ export default function Pricing() {
             <div
               key={plan.tier}
               className={`rounded-3xl p-8 ${
-                plan.popular ? "bg-red-400" : "bg-[#fccbcd]"
+                plan.popular
+                  ? "bg-gradient-to-t from-[#b45057] to-[#e4656e] border-12 border-[#f78f97]"
+                  : plan.tier === "Diamond"
+                  ? "bg-gradient-to-t from-[#fcb4b8] to-[#fccfd1]"
+                  : "bg-gradient-to-t from-[#fcb4b8] to-[#fccfd1]"
               } relative`}
             >
               {plan.popular && (
-                <span className="absolute top-4 right-4 bg-white text-red-400 px-3 py-1 rounded-full text-sm">
+                <span className="absolute font-semibold top-4 right-4 bg-white text-[#8f5055] px-3 py-1 rounded-full text-sm">
                   MOST POPULAR
                 </span>
               )}
@@ -77,14 +81,34 @@ export default function Pricing() {
                 />
               </div>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              <h3
+                className={`text-2xl font-bold ${
+                  plan.popular ? "text-white" : "text-[#574547]"
+                } mb-2`}
+              >
                 {plan.tier}
               </h3>
-              <p className="text-gray-600 mb-6">{plan.description}</p>
+              <p
+                className={`${
+                  plan.popular ? "text-white" : "text-[#574547]"
+                } mb-6`}
+              >
+                {plan.description}
+              </p>
 
               <div className="mb-8">
-                <span className="text-4xl font-bold">${plan.price}</span>
-                <span className="text-gray-600">/month</span>
+                <span
+                  className={`text-4xl font-bold ${
+                    plan.popular ? "text-white" : "text-[#574547]"
+                  }`}
+                >
+                  ${plan.price}
+                </span>
+                <span
+                  className={plan.popular ? "text-white" : "text-[#574547]"}
+                >
+                  /month
+                </span>
               </div>
 
               <ul className="space-y-4 mb-8">
@@ -93,12 +117,12 @@ export default function Pricing() {
                     <div
                       className={`
                       w-6 h-6 rounded-full flex items-center justify-center mr-3
-                      ${plan.popular ? "bg-white/20" : "bg-[red-200]"}
+                      ${plan.popular ? "bg-white/20" : "bg-white"}
                     `}
                     >
                       <svg
                         className={`w-3.5 h-3.5 ${
-                          plan.popular ? "text-white" : "text-red-400"
+                          plan.popular ? "text-white" : "text-[#e17377]"
                         }`}
                         fill="none"
                         strokeLinecap="round"
@@ -111,7 +135,7 @@ export default function Pricing() {
                       </svg>
                     </div>
                     <span
-                      className={plan.popular ? "text-white" : "text-gray-600"}
+                      className={plan.popular ? "text-white" : "text-[#574547]"}
                     >
                       {feature}
                     </span>
@@ -122,8 +146,8 @@ export default function Pricing() {
               <button
                 className={`w-full py-3 px-6 rounded-lg font-medium ${
                   plan.popular
-                    ? "bg-white text-red-400"
-                    : "bg-red-400 text-white hover:bg-red-500"
+                    ? "bg-white text-[#e17377]"
+                    : "bg-[#e17377] text-white hover:bg-[#d66267]"
                 } transition-colors duration-200`}
               >
                 Land your role today!
