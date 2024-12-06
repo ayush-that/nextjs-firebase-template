@@ -17,12 +17,12 @@ const Hero = () => {
 
       {/* Main heading */}
       <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-mabry font-semibold text-[#403334] max-w-4xl mb-6">
-        Land your <span className="text-[#E75A82]">next opportunity</span>{" "}
+        Land your <span className="text-[#b24e55]">next opportunity</span>{" "}
         without lifting a finger.
       </h1>
 
       {/* Subheading */}
-      <p className="text-lg md:text-xl text-center text-[#4A3D55] max-w-3xl mb-12">
+      <p className="font-light text-lg md:text-xl text-center text-[#4A3D55] max-w-3xl mb-12">
         Answer a brief set of questions, and our AI will match you with
         opportunities, tailor your applications, and submit them — automating
         your whole search for the right role.
@@ -30,13 +30,13 @@ const Hero = () => {
 
       {/* Email input section */}
       <div className="w-full max-w-xl space-y-4">
-        <div className="flex gap-3 bg-white p-2 rounded-md shadow-sm">
+        <div className="flex gap-3 bg-white p-2 rounded-lg shadow-[0_4px_30px_rgba(231,90,130,0.15)]">
           <Input
             type="email"
             placeholder="Enter your email"
-            className="h-14 text-2xl text-[#B4A7BE] border-none focus-visible:ring-0 focus-visible:ring-offset-0"
+            className="h-14 text-xl text-[#b88c8e] border-transparent text-center placeholder:text-[#B88C8E] placeholder:text-lg"
           />
-          <Button className="h-14 px-8 text-xl font-normal rounded-md bg-gradient-to-r from-[#E75A82] to-[#E3405F] hover:opacity-90 text-white">
+          <Button className="h-14 px-8 text-lg font-normal rounded-lg bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white">
             Find your next role
             <svg
               className="ml-2"
@@ -56,7 +56,7 @@ const Hero = () => {
             </svg>
           </Button>
         </div>
-        <p className="text-sm text-center text-[#B4A7BE]">
+        <p className="text-sm text-center text-[#b26469]">
           * free for first 5 applications!
         </p>
       </div>
