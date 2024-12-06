@@ -12,24 +12,40 @@ const Newsletter = () => {
             Join our newsletter.
           </h2>
           <p className="text-xl text-white/90 max-w-xl">
-            Get insider tips, career hacks, and the latest job
+            Get insider tips, career hacks, and the latest job<br/>
             opportunities—delivered right to your inbox.
           </p>
 
           {/* Email input section */}
-          <div className="space-y-3 max-w-md">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="h-12 text-lg bg-white border-none focus-visible:ring-0 focus-visible:ring-offset-0"
-              />
-              <Button className="h-12 px-8 text-lg font-normal rounded-md bg-[#E75A82] hover:bg-[#E75A82]/90 text-white whitespace-nowrap">
-                Subscribe now!
-              </Button>
-            </div>
-            <p className="text-sm text-white/70">We won't spam you!</p>
+          <div className="flex gap-3 w-3/4 bg-white p-1 rounded-xl shadow-[0_4px_30px_rgba(231,90,130,0.15)]">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              className="h-14 text-xl text-[#b88c8e] border-transparent text-center placeholder:text-[#B88C8E] placeholder:text-lg"
+            />
+            <Button className="h-14 px-8 text-lg font-normal rounded-xl bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white">
+              Subscribe Now
+              <svg
+                className="ml-2"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12H19M19 12L12 5M19 12L12 19"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Button>
           </div>
+          <p className="text-sm text-center text-white">
+            We won't spam you. Promise.
+          </p>
         </div>
 
         {/* Right side - Image */}

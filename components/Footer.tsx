@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-12 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#D35C65]">
+    <footer className="w-full py-12 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#D35C65] border-t-2 border-white">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,7 +60,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Image
-                src="/instagram.svg"
+                src="/instagram.png"
                 alt="Instagram"
                 width={32}
                 height={32}
@@ -73,7 +73,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Image
-                src="/x.svg"
+                src="/twitter.svg"
                 alt="X (formerly Twitter)"
                 width={32}
                 height={32}
