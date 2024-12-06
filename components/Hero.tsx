@@ -30,13 +30,13 @@ const Hero = () => {
 
       {/* Email input section */}
       <div className="w-full max-w-xl space-y-4">
-        <div className="flex gap-3 bg-white p-2 rounded-lg shadow-[0_4px_30px_rgba(231,90,130,0.15)]">
+        <div className="flex gap-3 bg-white p-2 rounded-xl shadow-[0_4px_30px_rgba(231,90,130,0.15)]">
           <Input
             type="email"
             placeholder="Enter your email"
             className="h-14 text-xl text-[#b88c8e] border-transparent text-center placeholder:text-[#B88C8E] placeholder:text-lg"
           />
-          <Button className="h-14 px-8 text-lg font-normal rounded-lg bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white">
+          <Button className="h-14 px-8 text-lg font-normal rounded-xl bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white">
             Find your next role
             <svg
               className="ml-2"
