@@ -7,17 +7,17 @@ const Newsletter = () => {
     <section className="w-full min-h-screen py-16 px-4 sm:px-6 md:px-8 lg:px-12 flex items-center bg-[#D35C65]">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left side - Content */}
-        <div className="space-y-6">
+        <div className="space-y-6 text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-mabry font-semibold text-white">
             Join our newsletter.
           </h2>
-          <p className="text-xl text-white/90 max-w-xl">
+          <p className="text-xl text-white/90 max-w-xl mx-auto lg:mx-0">
             Get insider tips, career hacks, and the latest job opportunities—
-            <br /> delivered right to your inbox.
+            delivered right to your inbox.
           </p>
 
           {/* Email input section */}
-          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-3/4 bg-white p-1 rounded-xl shadow-[0_4px_30px_rgba(231,90,130,0.15)]">
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-3/4 bg-white p-1 rounded-xl shadow-[0_4px_30px_rgba(231,90,130,0.15)] mx-auto lg:mx-0">
             <Input
               type="email"
               placeholder="Enter your email"
@@ -43,7 +43,7 @@ const Newsletter = () => {
               </svg>
             </Button>
           </div>
-          <p className="text-sm text-white text-left sm:w-3/4">
+          <p className="text-sm text-white text-center lg:text-left sm:w-3/4 mx-auto lg:mx-0">
             We won't spam you. Promise.
           </p>
         </div>
