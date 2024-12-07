@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Solution = () => {
   return (
-    <section className="w-full min-h-screen py-32 px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col items-center justify-center bg-[#d35c65]">
+    <section className="w-full min-h-screen py-48 sm:py-32 px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col items-center justify-center bg-[#d35c65]">
       {/* Badge */}
       <div className="inline-flex items-center rounded-full bg-[#e59ca2] px-4 py-1.5 mb-8">
         <span className="text-sm font-medium text-[#ffffff]">The Solution</span>
@@ -18,7 +18,7 @@ const Solution = () => {
       </h2>
 
       {/* Cards Container */}
-      <div className="w-full max-w-7xl bg-[#fff7f8] rounded-3xl p-8 md:p-16 border-16 border-[#ffb8b8]">
+      <div className="w-full max-w-7xl bg-[#fff7f8] rounded-3xl p-8 md:p-16 border-8 md:border-16 border-[#ffb8b8]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Card 1 */}
           <div className="flex flex-col items-center text-center space-y-6">
