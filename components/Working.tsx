@@ -34,7 +34,13 @@ const Working = () => {
   const [currentStep, setCurrentStep] = useState(0);
 
   const nextStep = () => {
-    setCurrentStep((prev) => (prev === steps.length - 1 ? 0 : prev + 1));
+    if (currentStep === steps.length - 1) {
+      document
+        .querySelector("#contact")
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      setCurrentStep((prev) => prev + 1);
+    }
   };
 
   return (

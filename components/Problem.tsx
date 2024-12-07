@@ -25,10 +25,14 @@ const Problem = () => {
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-mabry font-semibold text-[#403334]">
-                Hunting for roles manually can be{" "}
-                <span className="text-[#b24e55]">stressful</span> and{" "}
-                <span className="text-[#b24e55]">time-consuming</span>.
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-mabry font-semibold text-[#403334]">
+                <span className="lg:hidden">
+                  Hunting for roles manually can be <span className="text-[#b24e55]">stressful</span> and <span className="text-[#b24e55]">time-consuming</span>.
+                </span>
+                <span className="hidden lg:inline">
+                  Hunting for roles manually can<br /> be <span className="text-[#b24e55]">stressful</span> and{" "}
+                  <span className="text-[#b24e55]">time-consuming</span>.
+                </span>
               </h2>
 
               <div className="space-y-6">
@@ -43,8 +47,8 @@ const Problem = () => {
                     />
                   </div>
                   <p className="text-lg font-light text-[#403334]">
-                    Manually applying for roles at multiple places is
-                    frustrating.
+                    <span className="lg:hidden">Manually applying for roles at multiple places is frustrating.</span>
+                    <span className="hidden lg:inline">Manually applying for roles at multiple places<br /> is frustrating.</span>
                   </p>
                 </div>
 
@@ -58,7 +62,8 @@ const Problem = () => {
                     />
                   </div>
                   <p className="text-lg font-light text-[#403334]">
-                    Customizing applications repeatedly is time-consuming.
+                    <span className="lg:hidden">Customizing applications repeatedly is time-consuming.</span>
+                    <span className="hidden lg:inline">Customizing applications repeatedly is time-<br /> consuming.</span>
                   </p>
                 </div>
 
@@ -72,7 +77,8 @@ const Problem = () => {
                     />
                   </div>
                   <p className="text-lg font-light text-[#403334]">
-                    Facing constant rejections can lower your confidence.
+                    <span className="lg:hidden">Facing constant rejections can lower your confidence.</span>
+                    <span className="hidden lg:inline">Facing constant rejections can lower your <br /> confidence.</span>
                   </p>
                 </div>
               </div>
