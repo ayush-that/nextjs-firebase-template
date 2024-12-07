@@ -12,9 +12,8 @@ const Newsletter = () => {
             Join our newsletter.
           </h2>
           <p className="text-xl text-white/90 max-w-xl">
-            Get insider tips, career hacks, and the latest job
-            <br />
-            opportunities—delivered right to your inbox.
+            Get insider tips, career hacks, and the latest job opportunities—
+            <br /> delivered right to your inbox.
           </p>
 
           {/* Email input section */}

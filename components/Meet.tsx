@@ -21,8 +21,8 @@ const Meet = () => {
             Meet <span className="text-[#b24e55]">Hirebuddy</span>
           </h2>
           <p className="text-xl font-light text-[#4A3D55] max-w-2xl mx-auto">
-            Your personal career companion, making
-            <br /> opportunities come to you.
+            Your personal career companion,
+            <br /> making opportunities come to you.
           </p>
         </div>
 
@@ -82,8 +82,8 @@ const Meet = () => {
               Tailored CVs
             </h3>
             <p className="text-white/90 text-base font-light">
-              Get professionally tailored CVs and cover letters
-              <br /> that make your applications stand out.
+              Get professionally tailored CVs and cover
+              <br /> letters that make your applications stand out.
             </p>
           </div>
         </div>
