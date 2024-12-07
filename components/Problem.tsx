@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Problem = () => {
   return (
-    <section className="mt-0 w-full min-h-screen py-16 px-4 sm:px-6 md:px-8 lg:px-12 flex items-center bg-[#fff7f8]">
+    <section className="-mt-36 lg:-mt-6 w-full py-16 px-4 sm:px-6 md:px-8 lg:px-12 flex items-center bg-[#fff7f8]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left side - Image */}

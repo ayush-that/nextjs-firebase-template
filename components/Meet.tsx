@@ -5,7 +5,7 @@ const Meet = () => {
   return (
     <section
       id="about"
-      className="pt-36 w-full py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]"
+      className="-mt-36 md:-mt-6 pt-36 w-full py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
