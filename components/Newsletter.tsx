@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 
 const Newsletter = () => {
   return (
-    <section className="w-full min-h-screen py-16 px-4 sm:px-6 md:px-8 lg:px-12 flex items-center bg-[#D35C65]">
+    <section className="-mt-5 w-full min-h-screen py-16 px-4 sm:px-6 md:px-8 lg:px-12 flex items-center bg-[#D35C65]">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left side - Content */}
         <div className="space-y-6 text-center lg:text-left">
