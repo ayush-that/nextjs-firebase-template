@@ -12,18 +12,19 @@ const Newsletter = () => {
             Join our newsletter.
           </h2>
           <p className="text-xl text-white/90 max-w-xl">
-            Get insider tips, career hacks, and the latest job<br/>
+            Get insider tips, career hacks, and the latest job
+            <br />
             opportunities—delivered right to your inbox.
           </p>
 
           {/* Email input section */}
-          <div className="flex gap-3 w-3/4 bg-white p-1 rounded-xl shadow-[0_4px_30px_rgba(231,90,130,0.15)]">
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-3/4 bg-white p-1 rounded-xl shadow-[0_4px_30px_rgba(231,90,130,0.15)]">
             <Input
               type="email"
               placeholder="Enter your email"
-              className="h-14 text-xl text-[#b88c8e] border-transparent text-center placeholder:text-[#B88C8E] placeholder:text-lg"
+              className="h-14 text-xl text-[#b88c8e] border-transparent text-center placeholder:text-[#B88C8E] placeholder:text-lg flex-1"
             />
-            <Button className="h-14 px-8 text-lg font-normal rounded-xl bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white">
+            <Button className="h-14 px-8 text-lg font-normal rounded-xl bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white w-full sm:w-auto">
               Subscribe Now
               <svg
                 className="ml-2"
