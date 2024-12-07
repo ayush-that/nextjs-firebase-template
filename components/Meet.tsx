@@ -145,8 +145,8 @@ const Meet = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="text-center p-16">
-          <Button className="h-14 px-8 text-xl font-normal rounded-md bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white">
+        <div className="text-center mt-16 px-4 sm:px-0">
+          <Button className="w-full sm:w-auto h-14 px-8 text-xl font-normal rounded-md bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white flex items-center justify-center gap-2 mx-auto">
             Try Hirebuddy for free
             <svg
               width="24"

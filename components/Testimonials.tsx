@@ -59,18 +59,18 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="h-screen py-20 bg-[#fccfd1] relative overflow-hidden flex items-center">
+    <section className="min-h-screen py-10 md:py-20 bg-[#fccfd1] relative overflow-hidden flex items-center">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-4xl font-bold mb-16 text-[#403334] font">
+        <h2 className="text-center text-2xl md:text-4xl font-bold mb-8 md:mb-16 text-[#403334] font">
           See what our <span className="text-[#b24e55]">customers</span> have
-          <br /> to <span className="text-[#b24e55]">say about us...</span>
+          <br className="hidden md:block" /> to <span className="text-[#b24e55]">say about us...</span>
         </h2>
 
         <div className="max-w-4xl mx-auto relative">
           <div className="absolute top-4 -right-4 w-full h-full bg-[#ffeded] rounded-2xl transform rotate-2" />
           <div className="absolute top-2 -right-2 w-full h-full bg-[#ffd4d4] rounded-2xl transform rotate-1" />
 
-          <div className="relative bg-[#e17377] text-white hover:bg-[#d66267] rounded-2xl p-24">
+          <div className="relative bg-[#e17377] text-white hover:bg-[#d66267] rounded-2xl p-6 md:p-24">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -78,37 +78,37 @@ export default function Testimonials() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-2 gap-4"
+                className="grid grid-cols-1 md:grid-cols-2 gap-4"
               >
                 {[0, 1].map((offset) => {
                   const index = (currentIndex + offset) % testimonials.length;
                   return (
                     <div
                       key={index}
-                      className="bg-white rounded-xl p-6 shadow-lg"
+                      className="bg-white rounded-xl p-4 md:p-6 shadow-lg"
                     >
-                      <div className="mb-6">
-                        <h3 className="text-xl font-semibold mb-4">
+                      <div className="mb-4 md:mb-6">
+                        <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
                           "Frictionless"
                         </h3>
-                        <p className="text-gray-600">
+                        <p className="text-gray-600 text-sm md:text-base">
                           {testimonials[index].quote}
                         </p>
                       </div>
 
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-3 md:gap-4">
                         <Image
                           src={testimonials[index].avatar}
                           alt={testimonials[index].author}
-                          width={48}
-                          height={48}
-                          className="rounded-full"
+                          width={40}
+                          height={40}
+                          className="rounded-full w-10 h-10 md:w-12 md:h-12"
                         />
                         <div>
-                          <p className="font-semibold">
+                          <p className="font-semibold text-sm md:text-base">
                             {testimonials[index].author}
                           </p>
-                          <p className="text-gray-500">
+                          <p className="text-gray-500 text-xs md:text-sm">
                             {testimonials[index].role}
                           </p>
                         </div>
