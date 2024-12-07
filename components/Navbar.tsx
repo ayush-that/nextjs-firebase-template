@@ -12,13 +12,13 @@ const Navbar = () => {
       {/* Navigation Links */}
       <div className="hidden md:flex items-center space-x-8 font-medium">
         <Link
-          href="/about"
+          href="#about"
           className="text-[#b24e55] hover:text-[#E75A82] transition-colors"
         >
           About
         </Link>
         <Link
-          href="/pricing"
+          href="#pricing"
           className="text-[#b24e55] hover:text-[#E75A82] transition-colors"
         >
           Pricing
@@ -30,7 +30,7 @@ const Navbar = () => {
           Blogs
         </Link>
         <Link
-          href="/contact"
+          href="#contact"
           className="text-[#b24e55] hover:text-[#E75A82] transition-colors"
         >
           Contact
@@ -39,15 +39,19 @@ const Navbar = () => {
 
       {/* Action Buttons */}
       <div className="flex items-center space-x-4">
-        <Button
-          variant="ghost"
-          className="text-[#b24e55] hover:text-[#fc6f78] border border-[#b24e55] hover:border-[#fc6f78] hover:bg-transparent rounded-lg"
-        >
-          Log in
-        </Button>
-        <Button className="bg-gradient-to-t from-[#b24e55] to-[#E3405F] text-white rounded-lg">
-          Try for free!
-        </Button>
+        <Link href="#contact">
+          <Button
+            variant="ghost"
+            className="hidden md:inline-flex text-[#b24e55] hover:text-[#fc6f78] border border-[#b24e55] hover:border-[#fc6f78] hover:bg-transparent rounded-lg"
+          >
+            Log in
+          </Button>
+        </Link>
+        <Link href="#contact">
+          <Button className="bg-gradient-to-t from-[#b24e55] to-[#E3405F] text-white rounded-lg">
+            Try for free!
+          </Button>
+        </Link>
       </div>
     </nav>
   );

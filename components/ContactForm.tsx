@@ -91,7 +91,10 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="w-full min-h-screen py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]">
+    <section
+      id="contact"
+      className="w-full min-h-screen py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]"
+    >
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
