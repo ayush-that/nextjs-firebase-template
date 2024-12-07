@@ -3,10 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Meet = () => {
   return (
-    <section
-      id="about"
-      className="-mt-36 md:-mt-6 pt-36 w-full py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]"
-    >
+    <section className="pt-36 w-full py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
@@ -94,8 +91,8 @@ const Meet = () => {
         {/* Bottom Section with Bento Filler */}
         <div className="flex flex-col md:flex-row gap-6 items-stretch">
           {/* Email Card */}
-          <div className="flex-1 bg-white rounded-3xl p-8 text-center space-y-4">
-            <div className="relative w-full aspect-square max-w-[300px] mx-auto">
+          <div className="flex-1 bg-white rounded-3xl p-4 pt-2 pb-3 text-center">
+            <div className="relative w-full aspect-[4/3] max-w-[400px] mx-auto mb-2">
               <Image
                 src="/meet/personalized-email.svg"
                 alt="Personalized Emails"
@@ -103,10 +100,10 @@ const Meet = () => {
                 className="object-contain"
               />
             </div>
-            <h3 className="text-3xl font-mabry font-semibold text-[#403334]">
+            <h3 className="text-2xl font-mabry font-semibold text-[#403334] mb-1">
               Personalized Emails
             </h3>
-            <p className="text-[#403334] font-light text-base">
+            <p className="text-[#403334] font-light text-base leading-snug">
               We send personalized cold emails to
               <br /> recruiters on your behalf, increasing your
               <br /> chances of getting noticed.
@@ -127,8 +124,8 @@ const Meet = () => {
           </div>
 
           {/* Tracking Card */}
-          <div className="flex-1 bg-white rounded-3xl p-8 text-center space-y-4">
-            <div className="relative w-full aspect-square max-w-[300px] mx-auto">
+          <div className="flex-1 bg-white rounded-3xl p-4 pt-2 pb-3 text-center">
+            <div className="relative w-full aspect-[4/3] max-w-[400px] mx-auto mb-2">
               <Image
                 src="/meet/application-tracking.svg"
                 alt="Application Tracking"
@@ -136,10 +133,10 @@ const Meet = () => {
                 className="object-contain"
               />
             </div>
-            <h3 className="text-3xl font-mabry font-semibold text-[#403334]">
+            <h3 className="text-2xl font-mabry font-semibold text-[#403334] mb-1">
               Application Tracking
             </h3>
-            <p className="text-[#4A3D55] text-base font-light">
+            <p className="text-[#4A3D55] text-base font-light leading-snug">
               Stay updated with real-time notifications
               <br /> and status updates for all your job
               <br /> applications.
