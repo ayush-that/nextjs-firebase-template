@@ -43,13 +43,13 @@ const Newsletter = () => {
               </svg>
             </Button>
           </div>
-          <p className="text-sm text-center text-white">
+          <p className="text-sm text-white text-left sm:w-3/4">
             We won't spam you. Promise.
           </p>
         </div>
 
         {/* Right side - Image */}
-        <div className="relative w-full aspect-square max-w-[600px] mx-auto">
+        <div className="relative w-full aspect-square max-w-[500px] mx-auto">
           <Image
             src="/newsletter.svg"
             alt="Newsletter illustration"

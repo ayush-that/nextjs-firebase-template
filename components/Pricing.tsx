@@ -25,7 +25,7 @@ const pricingData = [
       "Reach up to 200 emails",
       "Tailored resume & CV",
     ],
-    imagePath: "/pricing/platinum.svg",
+    imagePath: "/pricing/platinum.png",
     popular: true,
   },
   {
@@ -40,7 +40,7 @@ const pricingData = [
       "Tailored resume & CV",
       "Priority customer support",
     ],
-    imagePath: "/pricing/diamond.svg",
+    imagePath: "/pricing/diamond.png",
   },
 ];
 
@@ -57,104 +57,115 @@ export default function Pricing() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 items-end">
           {pricingData.map((plan) => (
             <div
               key={plan.tier}
-              className={`rounded-3xl p-8 ${
+              className={`rounded-3xl p-8 flex flex-col ${
                 plan.popular
-                  ? "bg-gradient-to-t from-[#b45057] to-[#e4656e] border-12 border-[#f78f97]"
+                  ? "bg-gradient-to-t from-[#b45057] to-[#e4656e] border-12 border-[#f78f97] scale-105"
                   : plan.tier === "Diamond"
                   ? "bg-gradient-to-t from-[#fcb4b8] to-[#fccfd1]"
                   : "bg-gradient-to-t from-[#fcb4b8] to-[#fccfd1]"
               } relative`}
             >
-              {plan.popular && (
-                <span className="absolute font-semibold top-4 right-4 bg-white text-[#8f5055] px-3 py-1 rounded-full text-sm">
-                  MOST POPULAR
-                </span>
-              )}
-
-              <div className="h-12 w-20 relative mb-6">
-                <Image
-                  src={plan.imagePath}
-                  alt={`${plan.tier} tier`}
-                  fill
-                  className="object-contain"
-                />
+              <div className="h-24 relative">
+                {plan.popular && (
+                  <span className="absolute font-semibold top-0 right-0 bg-white text-[#8f5055] px-3 py-1 rounded-full text-sm">
+                    MOST POPULAR
+                  </span>
+                )}
+                <div className="h-12 w-20 relative">
+                  <Image
+                    src={plan.imagePath}
+                    alt={`${plan.tier} tier`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
 
-              <h3
-                className={`text-2xl font-bold ${
-                  plan.popular ? "text-white" : "text-[#574547]"
-                } mb-2`}
-              >
-                {plan.tier}
-              </h3>
-              <p
-                className={`${
-                  plan.popular ? "text-white" : "text-[#574547]"
-                } mb-6`}
-              >
-                {plan.description}
-              </p>
-
-              <div className="mb-8">
-                <span
-                  className={`text-4xl font-bold ${
+              <div className="h-48 flex flex-col">
+                <h3
+                  className={`text-3xl font-bold ${
+                    plan.popular
+                      ? "text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                      : "text-[#574547]"
+                  } mb-2`}
+                >
+                  {plan.tier}
+                </h3>
+                <p
+                  className={`${
                     plan.popular ? "text-white" : "text-[#574547]"
-                  }`}
+                  } mb-6`}
                 >
-                  ${plan.price}
-                </span>
-                <span
-                  className={plan.popular ? "text-white" : "text-[#574547]"}
-                >
-                  /month
-                </span>
+                  {plan.description}
+                </p>
+
+                <div className="mb-8">
+                  <span
+                    className={`text-4xl font-bold ${
+                      plan.popular
+                        ? "text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                        : "text-[#574547]"
+                    }`}
+                  >
+                    ${plan.price}
+                  </span>
+                  <span
+                    className={plan.popular ? "text-white" : "text-[#574547]"}
+                  >
+                    /month
+                  </span>
+                </div>
               </div>
 
-              <ul className="space-y-4 mb-8">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-center">
-                    <div
-                      className={`
-                      w-6 h-6 rounded-full flex items-center justify-center mr-3
-                      ${plan.popular ? "bg-white/20" : "bg-white"}
-                    `}
-                    >
-                      <svg
-                        className={`w-3.5 h-3.5 ${
-                          plan.popular ? "text-white" : "text-[#e17377]"
-                        }`}
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+              <div className="h-48 mb-auto">
+                <ul className="space-y-4">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-center">
+                      <div
+                        className={`
+                        w-6 h-6 rounded-full flex items-center justify-center mr-3
+                        ${plan.popular ? "bg-white/20" : "bg-white"}
+                      `}
                       >
-                        <path d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span
-                      className={plan.popular ? "text-white" : "text-[#574547]"}
-                    >
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                        <svg
+                          className={`w-3.5 h-3.5 ${
+                            plan.popular ? "text-white" : "text-[#e17377]"
+                          }`}
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span
+                        className={plan.popular ? "text-white" : "text-[#574547]"}
+                      >
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-              <button
-                className={`w-full py-3 px-6 rounded-lg font-medium ${
-                  plan.popular
-                    ? " bg-gradient-to-t from-[#f9b6bc] to-[#fffcfd] text-[#8f5055]"
-                    : "bg-[#e17377] text-white hover:bg-[#d66267]"
-                } transition-colors duration-200`}
-              >
-                Land your role today!
-              </button>
+              <div className="mt-8">
+                <button
+                  className={`w-full py-3 px-6 rounded-lg font-medium ${
+                    plan.popular
+                      ? "bg-gradient-to-t from-[#f9b6bc] to-[#fffcfd] text-[#8f5055] py-4"
+                      : "bg-[#e17377] text-white hover:bg-[#d66267]"
+                  } transition-colors duration-200`}
+                >
+                  Land your role today!
+                </button>
+              </div>
             </div>
           ))}
         </div>

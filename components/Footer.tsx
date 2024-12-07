@@ -42,7 +42,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex justify-start lg:justify-end space-x-4 items-start">
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/hirebuddyy/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -55,7 +55,7 @@ const Footer = () => {
               />
             </Link>
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/hirebuddy_"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -68,7 +68,7 @@ const Footer = () => {
               />
             </Link>
             <Link
-              href="https://x.com"
+              href="https://x.com/hirebuddy_"
               target="_blank"
               rel="noopener noreferrer"
             >
