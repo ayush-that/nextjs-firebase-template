@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 
 const Hero = () => {
   return (
-    <div className="pt-28 w-full flex flex-col items-center justify-center px-4 bg-[#fff7f8]">
+    <div className="pt-20 w-full flex flex-col items-center justify-center px-4 bg-[#fff7f8]">
       {/* What's new badge */}
       <div className="mb-8">
         <div className="inline-flex items-center rounded-full border border-[#ffe0e0] bg-[#ffe0e0] px-4 py-1.5">
@@ -30,7 +30,7 @@ const Hero = () => {
 
       {/* Email input section */}
       <div className="w-full max-w-xl space-y-4">
-        <div className="flex flex-col sm:flex-row gap-3 bg-white p-2 rounded-xl shadow-[0_4px_30px_rgba(231,90,130,0.15)]">
+        <div className="flex flex-col sm:flex-row gap-3 bg-white p-2 rounded-xl shadow-[0_4px_60px_rgba(231,90,130,0.35)]">
           <Input
             type="email"
             placeholder="Enter your email"

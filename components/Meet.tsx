@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/button";
 
 const Meet = () => {
   return (
-    <section id="about" className="pt-36 w-full py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]">
+    <section
+      id="about"
+      className="pt-36 w-full py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FFEDED]"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
