@@ -11,7 +11,7 @@ const testimonials = [
       "With HireBuddy, the entire process was so frictionless, I thought that this would've saved so much of my time had I known this before.",
     author: "Robin Sharma",
     role: "Student, XYZ College",
-    avatar: "/girl1.png",
+    avatar: "/testimonials/girl1.png",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const testimonials = [
       "The platform made hiring incredibly simple. The automated processes saved us countless hours of manual work.",
     author: "Jane Cooper",
     role: "HR Manager, ABC Corp",
-    avatar: "/girl.png",
+    avatar: "/testimonials/girl1.png",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const testimonials = [
       "I was amazed by how quickly we could find qualified candidates. The AI matching system is truly revolutionary.",
     author: "Michael Chen",
     role: "Tech Lead, DEF Startups",
-    avatar: "/girl.png",
+    avatar: "/testimonials/girl1.png",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const testimonials = [
       "The interview scheduling and feedback collection features streamlined our entire recruitment process.",
     author: "Sarah Johnson",
     role: "Recruiter, GHI Solutions",
-    avatar: "/girl1.png",
+    avatar: "/testimonials/girl1.png",
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const testimonials = [
       "HireBuddy has transformed how we approach hiring. The analytics and insights are invaluable.",
     author: "David Miller",
     role: "CEO, JKL Industries",
-    avatar: "/avatar5.png",
+    avatar: "/testimonials/girl1.png",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function Testimonials() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 
     return () => clearInterval(timer);
   }, []);
