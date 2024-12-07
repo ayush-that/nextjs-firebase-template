@@ -10,6 +10,7 @@ import FAQ from "@/components/FAQ";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
       <Pricing />
       <FAQ />
       <Newsletter />
+      <ContactForm />
       <Footer />
     </main>
   );
