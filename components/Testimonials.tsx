@@ -49,7 +49,7 @@ export default function Testimonials() {
     const timer = setInterval(() => {
       setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 7000);
 
     return () => clearInterval(timer);
   }, []);
@@ -138,7 +138,7 @@ export default function Testimonials() {
                     }
                     transition={{
                       type: "tween",
-                      duration: 0.5,
+                      duration: 1,
                       ease: "easeInOut",
                     }}
                     className="absolute left-0 transform blur-sm pointer-events-none"
@@ -176,7 +176,7 @@ export default function Testimonials() {
                     exit={{ x: direction * -200, opacity: 0 }}
                     transition={{
                       type: "tween",
-                      duration: 0.5,
+                      duration: 1,
                       ease: "easeInOut",
                     }}
                     className="bg-[#ffedee] rounded-[1rem] p-8 w-[32rem] z-10"
@@ -211,7 +211,7 @@ export default function Testimonials() {
                     }
                     transition={{
                       type: "tween",
-                      duration: 0.5,
+                      duration: 1,
                       ease: "easeInOut",
                     }}
                     className="absolute right-0 transform blur-sm pointer-events-none"

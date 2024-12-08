@@ -144,10 +144,16 @@ const Working = () => {
 
                   <div className="pt-2 sm:pt-4">
                     <Button
-                      onClick={handleClick}
+                      onClick={
+                        currentStep < steps.length - 1
+                          ? () => setCurrentStep(currentStep + 1)
+                          : handleClick
+                      }
                       className="h-10 sm:h-12 px-6 sm:px-8 text-base sm:text-lg font-normal rounded-md bg-gradient-to-t from-[#f9b6bc] to-[#fffcfd] text-[#8f5055] hover:bg-white/90"
                     >
-                      Try it yourself
+                      {currentStep < steps.length - 1
+                        ? "Next Step"
+                        : "Try it yourself"}
                     </Button>
                   </div>
                 </motion.div>
