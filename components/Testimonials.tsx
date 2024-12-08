@@ -126,21 +126,12 @@ export default function Testimonials() {
                     <motion.div
                       key={`prev-${currentIndex}`}
                       custom={direction}
-                      initial={
-                        direction > 0
-                          ? { x: -300, opacity: 0 }
-                          : { x: -150, opacity: 0.5 }
-                      }
-                      animate={{ x: -150, opacity: 0.5 }}
-                      exit={
-                        direction > 0
-                          ? { x: -300, opacity: 0 }
-                          : { x: 0, opacity: 0 }
-                      }
+                      initial={{ opacity: 0, x: -100 }}
+                      animate={{ opacity: 0.5, x: -150 }}
+                      exit={{ opacity: 0, x: -100 }}
                       transition={{
-                        type: "tween",
-                        duration: 1,
-                        ease: "easeInOut",
+                        duration: 0.5,
+                        ease: "easeOut"
                       }}
                       className="transform blur-sm pointer-events-none"
                     >
@@ -173,13 +164,13 @@ export default function Testimonials() {
                   <motion.div
                     key={currentIndex}
                     custom={direction}
-                    initial={{ x: direction * 200, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: direction * -200, opacity: 0 }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
                     transition={{
-                      type: "tween",
-                      duration: 1,
-                      ease: "easeInOut",
+                      opacity: { duration: 0.5 },
+                      scale: { duration: 0.7 },
+                      ease: "easeOut"
                     }}
                     className="bg-[#ffedee] rounded-[1rem] p-4 sm:p-8 w-full sm:w-[28rem] md:w-[32rem] z-10"
                   >
@@ -201,21 +192,12 @@ export default function Testimonials() {
                     <motion.div
                       key={`next-${currentIndex}`}
                       custom={direction}
-                      initial={
-                        direction > 0
-                          ? { x: 300, opacity: 0 }
-                          : { x: 150, opacity: 0.5 }
-                      }
-                      animate={{ x: 150, opacity: 0.5 }}
-                      exit={
-                        direction > 0
-                          ? { x: 0, opacity: 0 }
-                          : { x: 300, opacity: 0 }
-                      }
+                      initial={{ opacity: 0, x: 100 }}
+                      animate={{ opacity: 0.5, x: 150 }}
+                      exit={{ opacity: 0, x: 100 }}
                       transition={{
-                        type: "tween",
-                        duration: 1,
-                        ease: "easeInOut",
+                        duration: 0.5,
+                        ease: "easeOut"
                       }}
                       className="transform blur-sm pointer-events-none"
                     >
