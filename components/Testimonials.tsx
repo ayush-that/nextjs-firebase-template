@@ -42,29 +42,58 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(1);
+  const [[currentIndex, direction], setCurrent] = useState([0, 0]);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setDirection(1);
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 7000);
+      handleNext();
+    }, 3000);
 
     return () => clearInterval(timer);
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex]);
 
   const handlePrevious = () => {
-    setDirection(-1);
-    setCurrentIndex((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
+    setCurrent([
+      currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1,
+      -1,
+    ]);
   };
 
   const handleNext = () => {
-    setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setCurrent([
+      (currentIndex + 1) % testimonials.length,
+      1,
+    ]);
   };
+
+  const variants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 300 : -300,
+      opacity: 0,
+      position: "absolute",
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      position: "relative",
+    },
+    exit: (direction: number) => ({
+      x: direction < 0 ? 300 : -300,
+      opacity: 0,
+      position: "absolute",
+    }),
+  };
+
+  const swipeTransition = {
+    x: { type: "spring", stiffness: 300, damping: 30 },
+    opacity: { duration: 0.2 },
+  };
+
+  // Calculate Previous and Next Indices
+  const prevIndex =
+    currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1;
+  const nextIndex = (currentIndex + 1) % testimonials.length;
 
   return (
     <section className="min-h-screen py-8 sm:py-10 md:py-20 bg-[#fccfd1] relative flex items-center">
@@ -119,61 +148,44 @@ export default function Testimonials() {
 
           <div className="relative bg-gradient-to-t from-[#b45057] to-[#e4656e] rounded-[1rem] sm:rounded-[2rem] p-4 sm:p-12 md:p-16 border-4 sm:border-8 md:border-16 border-[#f78f97] min-h-[400px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.25)] overflow-hidden">
             <div className="relative w-full max-w-[80rem] mx-auto">
-              <AnimatePresence mode="wait" custom={direction}>
-                <div className="flex items-center justify-center relative min-h-[300px]">
-                  {/* Previous Card (Left) */}
-                  <div className="hidden sm:block absolute left-[calc(50%-36rem)] top-1/2 -translate-y-1/2">
-                    <motion.div
-                      key={`prev-${currentIndex}`}
-                      custom={direction}
-                      initial={{ opacity: 0, x: -100 }}
-                      animate={{ opacity: 0.5, x: -150 }}
-                      exit={{ opacity: 0, x: -100 }}
-                      transition={{
-                        duration: 0.5,
-                        ease: "easeOut"
-                      }}
-                      className="transform blur-sm pointer-events-none"
-                    >
-                      <div className="bg-[#ffedee] rounded-[1rem] p-8 w-[24rem]">
-                        <div className="space-y-6">
-                          <h3 className="text-2xl font-semibold text-gray-800">
-                            "
-                            {
-                              testimonials[
-                                (currentIndex - 1 + testimonials.length) %
-                                  testimonials.length
-                              ].title
-                            }
-                            "
-                          </h3>
-                          <p className="text-gray-600 text-lg leading-relaxed line-clamp-4">
-                            {
-                              testimonials[
-                                (currentIndex - 1 + testimonials.length) %
-                                  testimonials.length
-                              ].quote
-                            }
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
+              {/* Blurred Previous Card */}
+              <motion.div
+                key={`prev-${prevIndex}`}
+                custom={-1}
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 0.5, x: -150 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                }}
+                className="hidden sm:block absolute left-[calc(50%-36rem)] top-0 pointer-events-none"
+              >
+                <div className="bg-[#ffedee] rounded-[1rem] p-8 w-[24rem]">
+                  <div className="space-y-6">
+                    <h3 className="text-2xl font-semibold text-gray-800">
+                      "{testimonials[prevIndex].title}"
+                    </h3>
+                    <p className="text-gray-600 text-lg leading-relaxed line-clamp-4">
+                      {testimonials[prevIndex].quote}
+                    </p>
                   </div>
+                </div>
+              </motion.div>
 
-                  {/* Current Card */}
-                  <motion.div
-                    key={currentIndex}
-                    custom={direction}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{
-                      opacity: { duration: 0.5 },
-                      scale: { duration: 0.7 },
-                      ease: "easeOut"
-                    }}
-                    className="bg-[#ffedee] rounded-[1rem] p-4 sm:p-8 w-full sm:w-[28rem] md:w-[32rem] z-10"
-                  >
+              {/* Current Testimonial */}
+              <AnimatePresence custom={direction} initial={false}>
+                <motion.div
+                  key={currentIndex}
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={swipeTransition}
+                  className="flex items-center justify-center relative min-h-[300px]"
+                >
+                  <div className="bg-[#ffedee] rounded-[1rem] p-4 sm:p-8 w-full sm:w-[28rem] md:w-[32rem] z-10">
                     <div className="space-y-4 sm:space-y-6">
                       <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
                         "{testimonials[currentIndex].title}"
@@ -185,53 +197,52 @@ export default function Testimonials() {
                         {testimonials[currentIndex].author}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
 
-                  {/* Next Card (Right) */}
-                  <div className="hidden sm:block absolute right-[calc(50%-36rem)] top-1/2 -translate-y-1/2">
-                    <motion.div
-                      key={`next-${currentIndex}`}
-                      custom={direction}
-                      initial={{ opacity: 0, x: 100 }}
-                      animate={{ opacity: 0.5, x: 150 }}
-                      exit={{ opacity: 0, x: 100 }}
-                      transition={{
-                        duration: 0.5,
-                        ease: "easeOut"
-                      }}
-                      className="transform blur-sm pointer-events-none"
-                    >
-                      <div className="bg-[#ffedee] rounded-[1rem] p-8 w-[24rem]">
-                        <div className="space-y-6">
-                          <h3 className="text-2xl font-semibold text-gray-800">
-                            "
-                            {
-                              testimonials[
-                                (currentIndex + 1) % testimonials.length
-                              ].title
-                            }
-                            "
-                          </h3>
-                          <p className="text-gray-600 text-lg leading-relaxed line-clamp-4">
-                            {
-                              testimonials[
-                                (currentIndex + 1) % testimonials.length
-                              ].quote
-                            }
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
+              {/* Blurred Next Card */}
+              <motion.div
+                key={`next-${nextIndex}`}
+                custom={1}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 0.5, x: 150 }}
+                exit={{ opacity: 0, x: 100 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                }}
+                className="hidden sm:block absolute right-[calc(50%-36rem)] top-0 pointer-events-none"
+              >
+                <div className="bg-[#ffedee] rounded-[1rem] p-8 w-[24rem]">
+                  <div className="space-y-6">
+                    <h3 className="text-2xl font-semibold text-gray-800">
+                      "{testimonials[nextIndex].title}"
+                    </h3>
+                    <p className="text-gray-600 text-lg leading-relaxed line-clamp-4">
+                      {testimonials[nextIndex].quote}
+                    </p>
                   </div>
                 </div>
-              </AnimatePresence>
+              </motion.div>
             </div>
 
             <div className="flex justify-center gap-2 mt-8">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() => {
+                    if (index !== currentIndex) {
+                      setCurrent([
+                        index,
+                        index > currentIndex
+                          ? 1
+                          : index < currentIndex
+                          ? -1
+                          : 0,
+                      ]);
+                    }
+                  }}
                   className={`h-2 rounded-full transition-all ${
                     index === currentIndex
                       ? "w-8 bg-[#ffedee]"
