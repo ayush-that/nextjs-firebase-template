@@ -28,18 +28,27 @@ const testimonials = [
   },
   {
     id: 4,
-    title: "Game Changing",
+    title: "Relieving",
     quote:
-      "Hirebuddy completely changed my job search! It made everything so much easier and within weeks I had interviews lined up. I honestly couldn’t have asked for a better experience! ",
-    author: "Raghav Gaur",
+      "Job hunting used to be so stressful, but Hirebuddy made it so much easier. The platform handled everything, and I landed interviews quickly. It was such a relief!",
+    author: "Satyansh Kumar",
+  },
+  {
+    id: 5,
+    title: "Seamless",
+    quote:
+      "Hirebuddy made my job search seamless! From personalized job matches to application tracking, everything was handled effortlessly. I landed interviews fast, and the whole experience was smooth and stress-free!",
+    author: "Vaishnavi Kant",
   },
 ];
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(1);
 
   useEffect(() => {
     const timer = setInterval(() => {
+      setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
 
@@ -47,12 +56,14 @@ export default function Testimonials() {
   }, []);
 
   const handlePrevious = () => {
+    setDirection(-1);
     setCurrentIndex((prev) =>
       prev === 0 ? testimonials.length - 1 : prev - 1
     );
   };
 
   const handleNext = () => {
+    setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
@@ -108,38 +119,124 @@ export default function Testimonials() {
               </svg>
             </button>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 -mx-4 sm:-mx-12 md:-mx-24"
-              >
-                {[0, 1, 2].map((offset) => {
-                  const index = (currentIndex + offset) % testimonials.length;
-                  return (
-                    <div
-                      key={index}
-                      className="bg-[#ffedee] rounded-[1rem] sm:rounded-[1.5rem] p-4 sm:p-6 md:p-8 shadow-[0px_0px_8px_0px_rgba(0,0,0,0.15)] w-full flex flex-col"
-                    >
-                      <div className="mb-4 px-2 sm:px-4 flex-1 space-y-6">
-                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 font-mabry">
-                          "{testimonials[index].title}"
+            <div className="relative overflow-hidden">
+              <AnimatePresence mode="wait" custom={direction}>
+                <div className="flex items-center justify-center relative">
+                  {/* Previous Card (Left) */}
+                  <motion.div 
+                    key={`prev-${currentIndex}`}
+                    custom={direction}
+                    initial={direction > 0 
+                      ? { x: -400, opacity: 0 }
+                      : { x: -200, opacity: 0.5 }
+                    }
+                    animate={{ x: -200, opacity: 0.5 }}
+                    exit={direction > 0 
+                      ? { x: -400, opacity: 0 }
+                      : { x: 0, opacity: 0 }
+                    }
+                    transition={{ 
+                      type: "tween",
+                      duration: 0.5,
+                      ease: "easeInOut"
+                    }}
+                    className="absolute left-0 transform blur-sm pointer-events-none"
+                  >
+                    <div className="bg-[#ffedee] rounded-[1rem] p-8 w-96">
+                      <div className="space-y-6">
+                        <h3 className="text-2xl font-semibold text-gray-800">
+                          "
+                          {
+                            testimonials[
+                              (currentIndex - 1 + testimonials.length) %
+                                testimonials.length
+                            ].title
+                          }
+                          "
                         </h3>
-                        <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
-                          {testimonials[index].quote}
-                        </p>
-                        <p className="font-semibold text-gray-800">
-                          {testimonials[index].author}
+                        <p className="text-gray-600 text-lg leading-relaxed line-clamp-4">
+                          {
+                            testimonials[
+                              (currentIndex - 1 + testimonials.length) %
+                                testimonials.length
+                            ].quote
+                          }
                         </p>
                       </div>
                     </div>
-                  );
-                })}
-              </motion.div>
-            </AnimatePresence>
+                  </motion.div>
+
+                  {/* Current Card */}
+                  <motion.div
+                    key={currentIndex}
+                    custom={direction}
+                    initial={{ x: direction * 200, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: direction * -200, opacity: 0 }}
+                    transition={{ 
+                      type: "tween",
+                      duration: 0.5,
+                      ease: "easeInOut"
+                    }}
+                    className="bg-[#ffedee] rounded-[1rem] p-8 w-[32rem] z-10"
+                  >
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-semibold text-gray-800">
+                        "{testimonials[currentIndex].title}"
+                      </h3>
+                      <p className="text-gray-600 text-lg leading-relaxed">
+                        {testimonials[currentIndex].quote}
+                      </p>
+                      <p className="font-semibold text-gray-800">
+                        {testimonials[currentIndex].author}
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Next Card (Right) */}
+                  <motion.div 
+                    key={`next-${currentIndex}`}
+                    custom={direction}
+                    initial={direction > 0 
+                      ? { x: 400, opacity: 0 }
+                      : { x: 200, opacity: 0.5 }
+                    }
+                    animate={{ x: 200, opacity: 0.5 }}
+                    exit={direction > 0 
+                      ? { x: 0, opacity: 0 }
+                      : { x: 400, opacity: 0 }
+                    }
+                    transition={{ 
+                      type: "tween",
+                      duration: 0.5,
+                      ease: "easeInOut"
+                    }}
+                    className="absolute right-0 transform blur-sm pointer-events-none"
+                  >
+                    <div className="bg-[#ffedee] rounded-[1rem] p-8 w-96">
+                      <div className="space-y-6">
+                        <h3 className="text-2xl font-semibold text-gray-800">
+                          "
+                          {
+                            testimonials[
+                              (currentIndex + 1) % testimonials.length
+                            ].title
+                          }
+                          "
+                        </h3>
+                        <p className="text-gray-600 text-lg leading-relaxed line-clamp-4">
+                          {
+                            testimonials[
+                              (currentIndex + 1) % testimonials.length
+                            ].quote
+                          }
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </AnimatePresence>
+            </div>
 
             <div className="flex justify-center gap-2 mt-8">
               {testimonials.map((_, index) => (
