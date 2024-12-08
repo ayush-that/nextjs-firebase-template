@@ -12,21 +12,21 @@ const steps = [
     title: "Upload your CV and preferences",
     description:
       "Start by uploading your CV and sharing your job preferences. This helps us understand your skills and goals, so we can match you with the right opportunities.",
-    image: "/cv.png",
+    image: "/working/working1.png",
   },
   {
     number: 2,
     title: "AI-Powered Matching",
     description:
       "Our advanced AI analyzes your profile and matches you with relevant job opportunities across multiple platforms, saving you hours of manual searching.",
-    image: "/cv.png",
+    image: "/working/working2.png",
   },
   {
     number: 3,
     title: "Automated Applications",
     description:
       "We automatically submit tailored applications to matched positions, handling the entire process while keeping you updated on the progress.",
-    image: "/cv.png",
+    image: "/working/working3.png",
   },
 ];
 
