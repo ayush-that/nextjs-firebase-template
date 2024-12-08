@@ -46,6 +46,16 @@ export default function Testimonials() {
     return () => clearInterval(timer);
   }, []);
 
+  const handlePrevious = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
   return (
     <section className="min-h-screen py-8 sm:py-10 md:py-20 bg-[#fccfd1] relative overflow-hidden flex items-center">
       <div className="container mx-auto px-4 relative z-20">
@@ -55,8 +65,49 @@ export default function Testimonials() {
           <span className="text-[#b24e55]">say about us...</span>
         </h2>
 
-        <div className="max-w-5xl mx-auto relative">
+        <div className="max-w-7xl mx-auto relative">
           <div className="relative bg-gradient-to-t from-[#b45057] to-[#e4656e] rounded-[1.5rem] sm:rounded-[2rem] p-6 sm:p-12 md:p-16 border-8 sm:border-16 border-[#f78f97] min-h-[400px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.25)]">
+            <button
+              onClick={handlePrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 text-white"
+              aria-label="Previous testimonials"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={handleNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 text-white"
+              aria-label="Next testimonials"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </button>
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -64,9 +115,9 @@ export default function Testimonials() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 -mx-4 sm:-mx-12 md:-mx-24"
+                className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 -mx-4 sm:-mx-12 md:-mx-24"
               >
-                {[0, 1].map((offset) => {
+                {[0, 1, 2].map((offset) => {
                   const index = (currentIndex + offset) % testimonials.length;
                   return (
                     <div

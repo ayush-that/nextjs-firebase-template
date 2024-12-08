@@ -7,10 +7,10 @@ const Hero = () => {
       {/* What's new badge */}
       <div className="mb-8 lg:pl-2 lg:pr-24">
         <div className="inline-flex items-center rounded-full border border-[#ffe0e0] bg-[#ffe0e0] px-4 py-1.5">
-          <span className="text-sm font-medium text-[#3e3233]">Try now</span>
+          <span className="text-sm font-medium text-[#3e3233]">What's new</span>
           <div className="mx-2 h-4 w-[1px] bg-[#b16368]" />
           <span className="text-sm font-semibold text-[#b16368]">
-            first few applications free!
+            Coming soon to mobile
           </span>
         </div>
       </div>
@@ -57,7 +57,7 @@ const Hero = () => {
           </Button>
         </div>
         <p className="text-sm text-center text-[#b26469]">
-          * free for first 5 applications!
+          Try now- first few applications free!
         </p>
       </div>
     </div>
