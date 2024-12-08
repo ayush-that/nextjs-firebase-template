@@ -82,8 +82,8 @@ export default function Testimonials() {
   };
 
   const swipeTransition = {
-    x: { type: "spring", stiffness: 300, damping: 30 },
-    opacity: { duration: 0.2 },
+    x: { type: "spring", stiffness: 100, damping: 50 },
+    opacity: { duration: 0.8 },
   };
 
   // Calculate Previous and Next Indices
@@ -152,7 +152,7 @@ export default function Testimonials() {
                 animate={{ opacity: 0.5, x: -150 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{
-                  duration: 0.5,
+                  duration: 1.5,
                   ease: "easeOut",
                 }}
                 className="hidden sm:block absolute left-[calc(50%-36rem)] top-[0%] -translate-y-1/2 pointer-events-none"
@@ -203,7 +203,7 @@ export default function Testimonials() {
                 animate={{ opacity: 0.5, x: 150 }}
                 exit={{ opacity: 0, x: 100 }}
                 transition={{
-                  duration: 0.5,
+                  duration: 1.5,
                   ease: "easeOut",
                 }}
                 className="hidden sm:block absolute right-[calc(50%-36rem)] top-[0%] -translate-y-1/2 pointer-events-none"
