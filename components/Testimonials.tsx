@@ -47,7 +47,7 @@ export default function Testimonials() {
   useEffect(() => {
     const timer = setInterval(() => {
       handleNext();
-    }, 3000);
+    }, 6000);
 
     return () => clearInterval(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -156,9 +156,9 @@ export default function Testimonials() {
                   duration: 0.5,
                   ease: "easeOut",
                 }}
-                className="hidden sm:block absolute left-[calc(50%-36rem)] top-0 pointer-events-none"
+                className="hidden sm:block absolute left-[calc(50%-36rem)] top-[0%] -translate-y-1/2 pointer-events-none"
               >
-                <div className="bg-[#ffedee] rounded-[1rem] p-8 w-[24rem]">
+                <div className="bg-[#ffedee] rounded-[1rem] p-8 w-[24rem] min-h-[300px] flex flex-col justify-center">
                   <div className="space-y-6">
                     <h3 className="text-2xl font-semibold text-gray-800">
                       "{testimonials[prevIndex].title}"
@@ -171,32 +171,30 @@ export default function Testimonials() {
               </motion.div>
 
               {/* Current Testimonial */}
-              <AnimatePresence custom={direction} initial={false}>
-                <motion.div
-                  key={currentIndex}
-                  custom={direction}
-                  variants={variants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={swipeTransition}
-                  className="flex items-center justify-center relative min-h-[300px]"
-                >
-                  <div className="bg-[#ffedee] rounded-[1rem] p-4 sm:p-8 w-full sm:w-[28rem] md:w-[32rem] z-10">
-                    <div className="space-y-4 sm:space-y-6">
-                      <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
-                        "{testimonials[currentIndex].title}"
-                      </h3>
-                      <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                        {testimonials[currentIndex].quote}
-                      </p>
-                      <p className="font-semibold text-gray-800">
-                        {testimonials[currentIndex].author}
-                      </p>
-                    </div>
+              <motion.div
+                key={currentIndex}
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={swipeTransition}
+                className="flex items-center justify-center relative min-h-[300px]"
+              >
+                <div className="bg-[#ffedee] rounded-[1rem] p-4 sm:p-8 w-full sm:w-[28rem] md:w-[32rem] z-10 min-h-[300px] flex flex-col justify-center">
+                  <div className="space-y-4 sm:space-y-6">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
+                      "{testimonials[currentIndex].title}"
+                    </h3>
+                    <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                      {testimonials[currentIndex].quote}
+                    </p>
+                    <p className="font-semibold text-gray-800">
+                      {testimonials[currentIndex].author}
+                    </p>
                   </div>
-                </motion.div>
-              </AnimatePresence>
+                </div>
+              </motion.div>
 
               {/* Blurred Next Card */}
               <motion.div
@@ -209,9 +207,9 @@ export default function Testimonials() {
                   duration: 0.5,
                   ease: "easeOut",
                 }}
-                className="hidden sm:block absolute right-[calc(50%-36rem)] top-0 pointer-events-none"
+                className="hidden sm:block absolute right-[calc(50%-36rem)] top-[0%] -translate-y-1/2 pointer-events-none"
               >
-                <div className="bg-[#ffedee] rounded-[1rem] p-8 w-[24rem]">
+                <div className="bg-[#ffedee] rounded-[1rem] p-8 w-[24rem] min-h-[300px] flex flex-col justify-center">
                   <div className="space-y-6">
                     <h3 className="text-2xl font-semibold text-gray-800">
                       "{testimonials[nextIndex].title}"
