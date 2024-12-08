@@ -16,8 +16,8 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { db } from "@/lib/firebase";
 import { collection, addDoc } from "firebase/firestore";
-import PhoneInput from 'react-phone-number-input'
-import 'react-phone-number-input/style.css'
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -32,9 +32,14 @@ const formSchema = z.object({
   phone: z.string().min(1, {
     message: "Please enter a valid phone number.",
   }),
-  cvLink: z.string().url({
-    message: "Please enter a valid URL for your CV.",
-  }).optional(),
+  cvLink: z
+    .union([
+      z.string().url({
+        message: "Please enter a valid URL for your CV.",
+      }),
+      z.string().length(0),
+    ])
+    .optional(),
 });
 
 export default function ContactForm() {
@@ -192,7 +197,11 @@ export default function ContactForm() {
                           value={field.value}
                           onChange={field.onChange}
                           className="h-12 flex"
-                          style={{ '--PhoneInputCountryFlag-height': '20px' } as React.CSSProperties}
+                          style={
+                            {
+                              "--PhoneInputCountryFlag-height": "20px",
+                            } as React.CSSProperties
+                          }
                         />
                       </FormControl>
                       <FormMessage />
@@ -207,7 +216,9 @@ export default function ContactForm() {
                 name="cvLink"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-[#403334]">CV Link (Optional)</FormLabel>
+                    <FormLabel className="text-[#403334]">
+                      CV Link (Optional)
+                    </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Enter the link to your CV (optional)"

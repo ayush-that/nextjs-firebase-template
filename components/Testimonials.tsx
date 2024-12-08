@@ -61,27 +61,24 @@ export default function Testimonials() {
   };
 
   const handleNext = () => {
-    setCurrent([
-      (currentIndex + 1) % testimonials.length,
-      1,
-    ]);
+    setCurrent([(currentIndex + 1) % testimonials.length, 1]);
   };
 
   const variants = {
     enter: (direction: number) => ({
       x: direction > 0 ? 300 : -300,
       opacity: 0,
-      position: "absolute",
+      position: "absolute" as const,
     }),
     center: {
       x: 0,
       opacity: 1,
-      position: "relative",
+      position: "relative" as const,
     },
     exit: (direction: number) => ({
       x: direction < 0 ? 300 : -300,
       opacity: 0,
-      position: "absolute",
+      position: "absolute" as const,
     }),
   };
 
