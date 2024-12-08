@@ -8,11 +8,20 @@ import { useState } from "react";
 const Newsletter = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubscribe = () => {
+    setError("");
+    if (!email) {
+      setError("Please enter an email address");
+      return;
+    }
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (emailRegex.test(email)) {
       setIsSubscribed(true);
+    } else {
+      setError("Please enter a valid email address");
     }
   };
 
@@ -62,6 +71,11 @@ const Newsletter = () => {
                 </svg>
               </Button>
             </div>
+            {error && (
+              <p className="text-white font-medium text-center lg:text-left sm:w-3/4 mx-auto lg:mx-0">
+                {error} ❌
+              </p>
+            )}
             {isSubscribed && (
               <p className="text-white font-medium text-center lg:text-left sm:w-3/4 mx-auto lg:mx-0">
                 Subscribed! ✅
