@@ -118,12 +118,11 @@ export default function Testimonials() {
           </button>
 
           <div className="relative bg-gradient-to-t from-[#b45057] to-[#e4656e] rounded-[1rem] sm:rounded-[2rem] p-4 sm:p-12 md:p-16 border-4 sm:border-8 md:border-16 border-[#f78f97] min-h-[400px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.25)] overflow-hidden">
-            <div className="relative">
+            <div className="relative w-full max-w-[80rem] mx-auto">
               <AnimatePresence mode="wait" custom={direction}>
                 <div className="flex items-center justify-center relative min-h-[300px]">
-                  {/* Hide previous and next cards on mobile */}
-                  <div className="hidden sm:block">
-                    {/* Previous Card (Left) */}
+                  {/* Previous Card (Left) */}
+                  <div className="hidden sm:block absolute left-[calc(50%-36rem)] top-1/2 -translate-y-1/2">
                     <motion.div
                       key={`prev-${currentIndex}`}
                       custom={direction}
@@ -143,9 +142,9 @@ export default function Testimonials() {
                         duration: 1,
                         ease: "easeInOut",
                       }}
-                      className="absolute left-0 transform blur-sm pointer-events-none"
+                      className="transform blur-sm pointer-events-none"
                     >
-                      <div className="bg-[#ffedee] rounded-[1rem] p-8 w-96">
+                      <div className="bg-[#ffedee] rounded-[1rem] p-8 w-[24rem]">
                         <div className="space-y-6">
                           <h3 className="text-2xl font-semibold text-gray-800">
                             "
@@ -182,7 +181,7 @@ export default function Testimonials() {
                       duration: 1,
                       ease: "easeInOut",
                     }}
-                    className="bg-[#ffedee] rounded-[1rem] p-4 sm:p-8 w-full sm:w-[32rem] z-10"
+                    className="bg-[#ffedee] rounded-[1rem] p-4 sm:p-8 w-full sm:w-[28rem] md:w-[32rem] z-10"
                   >
                     <div className="space-y-4 sm:space-y-6">
                       <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
@@ -197,9 +196,8 @@ export default function Testimonials() {
                     </div>
                   </motion.div>
 
-                  {/* Hide previous and next cards on mobile */}
-                  <div className="hidden sm:block">
-                    {/* Next Card (Right) */}
+                  {/* Next Card (Right) */}
+                  <div className="hidden sm:block absolute right-[calc(50%-36rem)] top-1/2 -translate-y-1/2">
                     <motion.div
                       key={`next-${currentIndex}`}
                       custom={direction}
@@ -219,9 +217,9 @@ export default function Testimonials() {
                         duration: 1,
                         ease: "easeInOut",
                       }}
-                      className="absolute right-0 transform blur-sm pointer-events-none"
+                      className="transform blur-sm pointer-events-none"
                     >
-                      <div className="bg-[#ffedee] rounded-[1rem] p-8 w-96">
+                      <div className="bg-[#ffedee] rounded-[1rem] p-8 w-[24rem]">
                         <div className="space-y-6">
                           <h3 className="text-2xl font-semibold text-gray-800">
                             "

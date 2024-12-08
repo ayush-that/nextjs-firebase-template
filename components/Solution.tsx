@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Solution = () => {
   return (
-    <section className="w-full min-h-screen py-48 sm:py-32 px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col items-center justify-center bg-[#d35c65]">
+    <section className="w-full min-h-screen py-24 sm:py-32 px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col items-center justify-center bg-[#d35c65]">
       {/* Badge */}
       <div className="inline-flex items-center rounded-full bg-[#e59ca2] px-4 py-1.5 mb-8">
         <span className="text-sm font-medium text-[#ffffff]">The Solution</span>
@@ -31,7 +31,7 @@ const Solution = () => {
               />
             </div>
             <p className="text-lg font-light text-[#403334]">
-              Save time on applications and invest{' '}
+              Save time on applications and invest{" "}
               <span className="hidden md:inline">
                 <br />
               </span>
@@ -50,7 +50,7 @@ const Solution = () => {
               />
             </div>
             <p className="text-lg font-light text-[#403334]">
-              Stand out with tailored applications{' '}
+              Stand out with tailored applications{" "}
               <span className="hidden md:inline">
                 <br />
               </span>
@@ -69,7 +69,7 @@ const Solution = () => {
               />
             </div>
             <p className="text-lg font-light text-[#403334]">
-              Feel secure knowing your job search{' '}
+              Feel secure knowing your job search{" "}
               <span className="hidden md:inline">
                 <br />
               </span>
