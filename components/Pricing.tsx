@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 const pricingData = [
@@ -53,9 +55,7 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto m-24">
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center rounded-full bg-[#ffe0e0] px-4 py-1.5">
-            <span className="text-sm font-medium text-[#b26469]">
-              Pricing
-            </span>
+            <span className="text-sm font-medium text-[#b26469]">Pricing</span>
           </div>
         </div>
 
@@ -167,6 +167,11 @@ export default function Pricing() {
 
               <div className="mt-8">
                 <button
+                  onClick={() => {
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
                   className={`w-full py-3 px-6 rounded-lg font-medium ${
                     plan.popular
                       ? "bg-gradient-to-t from-[#f9b6bc] to-[#fffcfd] text-[#8f5055] py-4"
