@@ -50,7 +50,6 @@ export default function Testimonials() {
     }, 6000);
 
     return () => clearInterval(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
   const handlePrevious = () => {
