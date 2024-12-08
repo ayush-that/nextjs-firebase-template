@@ -92,7 +92,7 @@ const Footer = () => {
             Hirebuddy
           </Link>
           <p className="text-white">
-            Copyright {new Date().getFullYear()}, Hirebuddy
+            &copy; {new Date().getFullYear()} Hirebuddy, Inc. All rights reserved.
           </p>
         </div>
       </div>
