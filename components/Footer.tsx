@@ -10,13 +10,13 @@ const Footer = () => {
           {/* Left Links */}
           <div className="space-y-4">
             <Link
-              href="/contact"
+              href="#contact"
               className="block text-white hover:text-white/90 transition-colors"
             >
               Contact Us
             </Link>
             <Link
-              href="/about"
+              href="#about"
               className="block text-white hover:text-white/90 transition-colors"
             >
               About Us

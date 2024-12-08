@@ -7,6 +7,14 @@ import { useState } from "react";
 
 const Newsletter = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailRegex.test(email)) {
+      setIsSubscribed(true);
+    }
+  };
 
   return (
     <section className="-mt-5 w-full min-h-screen py-16 px-4 sm:px-6 md:px-8 lg:px-12 flex items-center bg-[#D35C65]">
@@ -27,10 +35,12 @@ const Newsletter = () => {
               <Input
                 type="email"
                 placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="h-14 text-xl text-[#b88c8e] border-transparent text-center placeholder:text-[#B88C8E] placeholder:text-lg flex-1"
               />
               <Button
-                onClick={() => setIsSubscribed(true)}
+                onClick={handleSubscribe}
                 className="h-14 px-8 text-lg font-normal rounded-xl bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white w-full sm:w-auto"
               >
                 Subscribe Now
