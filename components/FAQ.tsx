@@ -29,6 +29,14 @@ const faqs: FAQItem[] = [
     answer:
       "Our outbound reach feature automatically sends personalized emails to recruiters and hiring managers on your behalf, increasing your visibility and chances of landing interviews.",
   },
+  {
+    question: "Is my data secure with HireBuddy?",
+    answer: "Yes, we take data security seriously. All your personal information and documents are encrypted and stored securely. We comply with data protection regulations and never share your information without your consent.",
+  },
+  {
+    question: "How quickly can I start applying for jobs?",
+    answer: "You can start applying for jobs immediately after creating your account and uploading your CV. Our AI system processes your information within minutes, allowing you to begin sending personalized applications right away.",
+  },
 ];
 
 const FAQ = () => {
@@ -63,7 +71,7 @@ const FAQ = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm"
+                className="bg-[#ffe0e0]  rounded-2xl overflow-hidden shadow-sm border border-[#f0d3d3]"
               >
                 <button
                   className="w-full px-6 py-4 text-left flex items-center justify-between"
@@ -74,7 +82,7 @@ const FAQ = () => {
                   <span className="text-lg font-medium text-[#403334]">
                     {faq.question}
                   </span>
-                  <span className="text-3xl text-[#E75A82] transform transition-transform duration-200">
+                  <span className="text-3xl text-[#5f4f50] transform transition-transform duration-200">
                     {openIndex === index ? "−" : "+"}
                   </span>
                 </button>

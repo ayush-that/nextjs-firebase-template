@@ -10,7 +10,7 @@ const testimonials = [
     quote:
       "I found a job thanks to Hirebuddy’s efforts in helping me navigate the job search process, and I’m so happy that I used it! The platform was transparent and kept me informed about the process from the start. The team even helped with additional things like negotiating pay and building a proper resume, which was incredibly helpful! 10/10 would recommend!",
     author: "Saranya Ramesh",
-    role: "Student, XYZ College",
+    role: "Student",
     avatar: "/testimonials/sample.jpg",
   },
   {
@@ -18,15 +18,15 @@ const testimonials = [
     quote:
       "I was struggling with college placements for months without getting any interviews or opportunities. Then I used Hirebuddy. In just two weeks, I got interview calls from big companies like Purrple, FiMoney, and ShadowFax. I didn’t have to do anything Hirebuddy took care of it all. I just had to focus on preparing for my interviews. It really worked for me!",
     author: "Arnab Kundu",
-    role: "HR Manager, ABC Corp",
+    role: "Student",
     avatar: "/testimonials/sample.jpg",
   },
   {
     id: 3,
     quote:
-      "After months of sending applications manually, I discovered Hirebuddy. The automated job matching and application system saved me countless hours. Within a month, I had interviews with companies like Google, Microsoft, and Amazon. The personalized cold emails really helped me stand out from other candidates. I landed my dream job at Google, and I couldn't be happier!",
-    author: "Sarah Kim",
-    role: "Software Developer, Google",
+      "Hirebuddy's efforts for hunting an internship for me were commendable! I interacted with many companies and atlast found a good fit! Their algorithm definitely works and the outcomes are great! 10/10 recommended.",
+    author: "Charvi Sethi",
+    role: "Student",
     avatar: "/testimonials/sample.jpg",
   },
   {

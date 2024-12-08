@@ -115,82 +115,89 @@ export default function ContactForm() {
         <div className="bg-white rounded-3xl p-8 shadow-lg">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-[#403334]">Name</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Enter your name"
-                        className="h-12"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              {/* Name and Email grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-[#403334]">Name</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Enter your name"
+                          className="h-12"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-[#403334]">Email</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Enter your email"
-                        type="email"
-                        className="h-12"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-[#403334]">Email</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Enter your email"
+                          type="email"
+                          className="h-12"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
 
-              <FormField
-                control={form.control}
-                name="college"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-[#403334]">College</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Enter your college name"
-                        className="h-12"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              {/* College and Phone grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField
+                  control={form.control}
+                  name="college"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-[#403334]">College</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Enter your college name"
+                          className="h-12"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-              <FormField
-                control={form.control}
-                name="phone"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-[#403334]">
-                      Phone/WhatsApp Number
-                    </FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Enter your phone number"
-                        type="tel"
-                        className="h-12"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-[#403334]">
+                        Phone/WhatsApp Number
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Enter your phone number"
+                          type="tel"
+                          className="h-12"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
 
+              {/* CV Link (full width) */}
               <FormField
                 control={form.control}
                 name="cvLink"
