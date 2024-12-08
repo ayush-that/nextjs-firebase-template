@@ -35,8 +35,8 @@ export default function Home() {
       <Problem />
       <Solution />
       <Meet />
-      <Testimonials />
       <Working />
+      <Testimonials />
       <Pricing />
       <FAQ />
       <Newsletter />

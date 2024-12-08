@@ -31,8 +31,11 @@ const Solution = () => {
               />
             </div>
             <p className="text-lg font-light text-[#403334]">
-              Save time on applications and invest it in more productive
-              pursuits.
+              Save time on applications and invest{' '}
+              <span className="hidden md:inline">
+                <br />
+              </span>
+              it in more productive pursuits.
             </p>
           </div>
 
@@ -47,8 +50,11 @@ const Solution = () => {
               />
             </div>
             <p className="text-lg font-light text-[#403334]">
-              Stand out with tailored applications that highlight your
-              strengths.
+              Stand out with tailored applications{' '}
+              <span className="hidden md:inline">
+                <br />
+              </span>
+              that highlight your strengths.
             </p>
           </div>
 
@@ -63,7 +69,11 @@ const Solution = () => {
               />
             </div>
             <p className="text-lg font-light text-[#403334]">
-              Feel secure knowing your job search is expertly handled for you.
+              Feel secure knowing your job search{' '}
+              <span className="hidden md:inline">
+                <br />
+              </span>
+              is expertly handled for you.
             </p>
           </div>
         </div>
