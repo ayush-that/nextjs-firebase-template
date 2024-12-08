@@ -10,7 +10,7 @@ const Navbar = () => {
       </Link>
 
       {/* Navigation Links */}
-      <div className="hidden md:flex items-center space-x-8 font-medium">
+      <div className="hidden md:flex items-center space-x-8 font-medium lg:-mr-24 lg:-ml-1">
         <Link
           href="#about"
           className="text-[#b24e55] hover:text-[#E75A82] transition-colors"
