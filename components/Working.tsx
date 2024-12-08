@@ -62,9 +62,9 @@ const Working = () => {
   };
 
   return (
-    <section className="w-full min-h-screen py-16 px-4 sm:px-6 md:px-8 lg:px-12 flex items-center">
-      <div className="max-w-7xl mx-auto bg-[#D35C65] rounded-3xl p-8 md:p-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+    <section className="w-full min-h-screen py-8 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12 flex items-center">
+      <div className="max-w-7xl mx-auto bg-[#D35C65] rounded-3xl p-4 sm:p-8 md:p-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-16 items-center">
           {/* Left side - Image */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -73,7 +73,7 @@ const Working = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.5 }}
-              className="relative w-full aspect-video lg:aspect-square max-w-[600px] mx-auto rounded-3xl overflow-hidden"
+              className="relative w-full aspect-video lg:aspect-square max-w-[600px] mx-auto rounded-2xl sm:rounded-3xl overflow-hidden"
             >
               <Image
                 src={steps[currentStep].image}
@@ -86,16 +86,14 @@ const Working = () => {
           </AnimatePresence>
 
           {/* Right side - Content */}
-          <div className="space-y-8">
-            {/* Main "How it works" heading */}
-            <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold lg:pb-11">
+          <div className="space-y-4 sm:space-y-8">
+            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold lg:pb-11">
               How it works
             </h2>
 
-            {/* Added more gap between the heading and the steps */}
-            <div className="mt-12 flex gap-12">
-              {/* Steps indicator - vertical orientation with more gap */}
-              <div className="flex flex-col items-center gap-6 mt-6">
+            <div className="mt-6 sm:mt-12 flex gap-4 sm:gap-12">
+              {/* Steps indicator */}
+              <div className="flex flex-col items-center gap-3 sm:gap-6 mt-6">
                 {steps.map((step, position) =>
                   position === currentStep ? (
                     <motion.div
@@ -105,9 +103,9 @@ const Working = () => {
                       animate="animate"
                       exit="exit"
                       transition={{ duration: 0.3 }}
-                      className="w-12 h-12 rounded-full bg-white flex items-center justify-center"
+                      className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white flex items-center justify-center"
                     >
-                      <span className="text-xl font-semibold text-[#D35C65]">
+                      <span className="text-base sm:text-xl font-semibold text-[#D35C65]">
                         {step.number}
                       </span>
                     </motion.div>
@@ -118,7 +116,7 @@ const Working = () => {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="w-4 h-4 rounded-full bg-white cursor-pointer"
+                      className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white cursor-pointer"
                       onClick={() => setCurrentStep(position)}
                     />
                   )
@@ -134,20 +132,20 @@ const Working = () => {
                   animate="visible"
                   exit="exit"
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="space-y-6 flex-1"
+                  className="space-y-4 sm:space-y-6 flex-1"
                 >
-                  <h3 className="text-2xl md:text-3xl font-mabry font-semibold text-white">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-mabry font-semibold text-white">
                     {steps[currentStep].title}
                   </h3>
 
-                  <p className="text-lg font-light text-white max-w-xl">
+                  <p className="text-base sm:text-lg font-light text-white max-w-xl">
                     {steps[currentStep].description}
                   </p>
 
-                  <div className="pt-4">
+                  <div className="pt-2 sm:pt-4">
                     <Button
                       onClick={handleClick}
-                      className="h-12 px-8 text-lg font-normal rounded-md bg-gradient-to-t from-[#f9b6bc] to-[#fffcfd] text-[#8f5055] hover:bg-white/90"
+                      className="h-10 sm:h-12 px-6 sm:px-8 text-base sm:text-lg font-normal rounded-md bg-gradient-to-t from-[#f9b6bc] to-[#fffcfd] text-[#8f5055] hover:bg-white/90"
                     >
                       Try it yourself
                     </Button>

@@ -7,35 +7,31 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
+    title: "Effortless",
     quote:
-      "I found a job thanks to Hirebuddy’s efforts in helping me navigate the job search process, and I’m so happy that I used it! The platform was transparent and kept me informed about the process from the start. The team even helped with additional things like negotiating pay and building a proper resume, which was incredibly helpful! 10/10 would recommend!",
-    author: "Saranya Ramesh",
-    role: "Student",
-    avatar: "/testimonials/sample.jpg",
+      "I struggled with college placements for months without any interviews. In just two weeks, Hirebuddy got me multiple interviews with zero effort on my part.  ",
+    author: "Arnab Kundu",
   },
   {
     id: 2,
+    title: "Succesful",
     quote:
-      "I was struggling with college placements for months without getting any interviews or opportunities. Then I used Hirebuddy. In just two weeks, I got interview calls from big companies like Purrple, FiMoney, and ShadowFax. I didn’t have to do anything Hirebuddy took care of it all. I just had to focus on preparing for my interviews. It really worked for me!",
-    author: "Arnab Kundu",
-    role: "Student",
-    avatar: "/testimonials/sample.jpg",
+      "Hirebuddy's efforts in finding my internship were amazing! After interacting with several companies, I found the perfect fit. Their algorithm works, and the outcomes are fantastic! 10/10 recommended",
+    author: "Charvi Sethi",
   },
   {
     id: 3,
+    title: "Supportive",
     quote:
-      "Hirebuddy's efforts for hunting an internship for me were commendable! I interacted with many companies and atlast found a good fit! Their algorithm definitely works and the outcomes are great! 10/10 recommended.",
-    author: "Charvi Sethi",
-    role: "Student",
-    avatar: "/testimonials/sample.jpg",
+      "Hirebuddy completely changed my job search! It made everything so much easier and within weeks I had interviews lined up. I honestly couldn’t have asked for a better experience! ",
+    author: "Raghav Gaur",
   },
   {
     id: 4,
+    title: "Game Changing",
     quote:
-      "As a recent graduate, I was overwhelmed by the job search process. Hirebuddy's AI-powered system not only found relevant positions but also tailored my applications for each role. The CV customization feature was incredible - it helped me highlight the right skills for each position. In just three weeks, I received multiple offers. Thank you Hirebuddy for making my job search journey so smooth!",
-    author: "Alex Patel",
-    role: "Data Analyst, Meta",
-    avatar: "/testimonials/sample.jpg",
+      "Hirebuddy completely changed my job search! It made everything so much easier and within weeks I had interviews lined up. I honestly couldn’t have asked for a better experience! ",
+    author: "Raghav Gaur",
   },
 ];
 
@@ -75,33 +71,18 @@ export default function Testimonials() {
                   return (
                     <div
                       key={index}
-                      className="bg-[#ffedee] rounded-[1rem] sm:rounded-[1.5rem] p-6 sm:p-10 md:p-12 shadow-[0px_0px_8px_0px_rgba(0,0,0,0.15)]"
+                      className="bg-[#ffedee] rounded-[1rem] sm:rounded-[1.5rem] p-4 sm:p-6 md:p-8 shadow-[0px_0px_8px_0px_rgba(0,0,0,0.15)] w-full flex flex-col"
                     >
-                      <div className="mb-6 sm:mb-8">
-                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800 font-mabry">
-                          "Frictionless"
+                      <div className="mb-4 px-2 sm:px-4 flex-1 space-y-6">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 font-mabry">
+                          "{testimonials[index].title}"
                         </h3>
                         <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
                           {testimonials[index].quote}
                         </p>
-                      </div>
-
-                      <div className="flex items-center gap-3 sm:gap-4">
-                        <Image
-                          src={testimonials[index].avatar}
-                          alt={testimonials[index].author}
-                          width={48}
-                          height={48}
-                          className="rounded-lg w-12 h-12 object-cover"
-                        />
-                        <div>
-                          <p className="font-semibold text-gray-800">
-                            {testimonials[index].author}
-                          </p>
-                          <p className="text-gray-500">
-                            {testimonials[index].role}
-                          </p>
-                        </div>
+                        <p className="font-semibold text-gray-800">
+                          {testimonials[index].author}
+                        </p>
                       </div>
                     </div>
                   );
