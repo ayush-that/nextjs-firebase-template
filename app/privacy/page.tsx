@@ -10,6 +10,10 @@ export default function PrivacyPage() {
       </div>
 
       {/* Main Content */}
+      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-mabry font-semibold text-[#403334] max-w-4xl mb-6">
+        <span className="text-[#b24e55]">Coming Soon</span>
+      </h1>
+
       <p className="text-lg md:text-xl text-center text-[#4A3D55] max-w-2xl mb-12">
         We're currently crafting our privacy policy to ensure your data is
         protected. Please check back soon!
