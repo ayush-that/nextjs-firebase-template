@@ -6,7 +6,7 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-[#fff7f8] flex flex-col items-center justify-center p-4">
       {/* Badge */}
       <div className="inline-flex items-center rounded-full border border-[#ffe0e0] bg-[#ffe0e0] px-4 py-1.5 mb-8">
-        <span className="text-sm font-medium text-[#b16368]">Coming Soon</span>
+        <span className="text-sm font-medium text-[#b16368]">Notice</span>
       </div>
 
       {/* Main Content */}

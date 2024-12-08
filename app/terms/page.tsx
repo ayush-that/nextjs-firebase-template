@@ -6,12 +6,11 @@ export default function TermsPage() {
     <div className="min-h-screen bg-[#fff7f8] flex flex-col items-center justify-center p-4">
       {/* Badge */}
       <div className="inline-flex items-center rounded-full border border-[#ffe0e0] bg-[#ffe0e0] px-4 py-1.5 mb-8">
-        <span className="text-sm font-medium text-[#b16368]">Coming Soon</span>
+        <span className="text-sm font-medium text-[#b16368]">Notice</span>
       </div>
 
       {/* Main Content */}
       <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-mabry font-semibold text-[#403334] max-w-4xl mb-6">
-        Our Terms and Conditions are{" "}
         <span className="text-[#b24e55]">Coming Soon</span>
       </h1>
 
