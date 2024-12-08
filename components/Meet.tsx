@@ -118,7 +118,7 @@ const Meet = () => {
                 alt="Feature icons"
                 width={80}
                 height={400}
-                className="w-auto h-auto"
+                className="w-auto h-max -my-5"
               />
             </div>
           </div>

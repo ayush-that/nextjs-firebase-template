@@ -12,7 +12,7 @@ const pricingData = [
       "View up to 200 jobs",
       "Basic resume support",
     ],
-    imagePath: "/pricing/gold.svg",
+    imagePath: "/pricing/gold.png",
   },
   {
     tier: "Platinum",
@@ -51,6 +51,14 @@ export default function Pricing() {
       className="min-h-screen bg-[#ffedee] py-16 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto m-24">
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center rounded-full bg-[#ffe0e0] px-4 py-1.5">
+            <span className="text-sm font-medium text-[#b26469]">
+              Pricing
+            </span>
+          </div>
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-[#574547]">
             Plans to boost your <span className="text-[#d35c65]">career</span>.
@@ -71,7 +79,7 @@ export default function Pricing() {
             >
               <div className="h-24 relative">
                 {plan.popular && (
-                  <span className="absolute font-semibold top-0 right-0 bg-white text-[#8f5055] px-3 py-1 rounded-full text-sm">
+                  <span className="absolute font-semibold top-0 right-0 bg-gradient-to-t from-[#f9b6bc] to-[#fffcfd] text-[#8f5055] px-3 py-1 rounded-full text-sm">
                     MOST POPULAR
                   </span>
                 )}
@@ -128,12 +136,12 @@ export default function Pricing() {
                       <div
                         className={`
                         w-6 h-6 rounded-full flex items-center justify-center mr-3
-                        ${plan.popular ? "bg-white/20" : "bg-white"}
+                        ${plan.popular ? "bg-white/20" : "bg-[#efa1a6]"}
                       `}
                       >
                         <svg
                           className={`w-3.5 h-3.5 ${
-                            plan.popular ? "text-white" : "text-[#e17377]"
+                            plan.popular ? "text-white" : "text-[#85484c]"
                           }`}
                           fill="none"
                           strokeLinecap="round"
@@ -146,7 +154,9 @@ export default function Pricing() {
                         </svg>
                       </div>
                       <span
-                        className={plan.popular ? "text-white" : "text-[#574547]"}
+                        className={
+                          plan.popular ? "text-white" : "text-[#574547]"
+                        }
                       >
                         {feature}
                       </span>
