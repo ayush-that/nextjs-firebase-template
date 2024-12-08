@@ -34,7 +34,7 @@ const formSchema = z.object({
   }),
   cvLink: z.string().url({
     message: "Please enter a valid URL for your CV.",
-  }),
+  }).optional(),
 });
 
 export default function ContactForm() {
@@ -207,10 +207,10 @@ export default function ContactForm() {
                 name="cvLink"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-[#403334]">CV Link</FormLabel>
+                    <FormLabel className="text-[#403334]">CV Link (Optional)</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Enter the link to your CV"
+                        placeholder="Enter the link to your CV (optional)"
                         type="url"
                         className="h-12"
                         {...field}
