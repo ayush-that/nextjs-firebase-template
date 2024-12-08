@@ -16,6 +16,8 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { db } from "@/lib/firebase";
 import { collection, addDoc } from "firebase/firestore";
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -27,7 +29,7 @@ const formSchema = z.object({
   college: z.string().min(2, {
     message: "College name must be at least 2 characters.",
   }),
-  phone: z.string().min(10, {
+  phone: z.string().min(1, {
     message: "Please enter a valid phone number.",
   }),
   cvLink: z.string().url({
@@ -184,11 +186,13 @@ export default function ContactForm() {
                         Phone/WhatsApp Number
                       </FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="Enter your phone number"
-                          type="tel"
-                          className="h-12"
-                          {...field}
+                        <PhoneInput
+                          international
+                          defaultCountry="IN"
+                          value={field.value}
+                          onChange={field.onChange}
+                          className="h-12 flex"
+                          style={{ '--PhoneInputCountryFlag-height': '20px' } as React.CSSProperties}
                         />
                       </FormControl>
                       <FormMessage />

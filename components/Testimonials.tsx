@@ -68,17 +68,17 @@ export default function Testimonials() {
 
   return (
     <section className="min-h-screen py-8 sm:py-10 md:py-20 bg-[#fccfd1] relative flex items-center">
-      <div className="container mx-auto px-12 relative z-20">
+      <div className="container mx-auto px-4 sm:px-12 relative z-20">
         <h2 className="text-center text-xl sm:text-2xl md:text-4xl font-bold mb-6 sm:mb-8 md:mb-16 text-[#403334]">
           See what our <span className="text-[#b24e55]">customers</span> have
           <br className="hidden md:block" /> to{" "}
           <span className="text-[#b24e55]">say about us...</span>
         </h2>
 
-        <div className="max-w-7xl mx-auto relative px-24">
+        <div className="max-w-7xl mx-auto relative px-4 sm:px-24">
           <button
             onClick={handlePrevious}
-            className="absolute left-8 top-1/2 -translate-y-1/2 z-10 bg-[#ffedee] hover:bg-white rounded-full p-2 text-[#b24e55] shadow-md"
+            className="absolute left-0 sm:left-8 top-1/2 -translate-y-1/2 z-10 bg-[#ffedee] hover:bg-white rounded-full p-1 sm:p-2 text-[#b24e55] shadow-md"
             aria-label="Previous testimonials"
           >
             <svg
@@ -87,7 +87,7 @@ export default function Testimonials() {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="w-8 h-8"
+              className="w-6 h-6 sm:w-8 sm:h-8"
             >
               <path
                 strokeLinecap="round"
@@ -98,7 +98,7 @@ export default function Testimonials() {
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-8 top-1/2 -translate-y-1/2 z-10 bg-[#ffedee] hover:bg-white rounded-full p-2 text-[#b24e55] shadow-md"
+            className="absolute right-0 sm:right-8 top-1/2 -translate-y-1/2 z-10 bg-[#ffedee] hover:bg-white rounded-full p-1 sm:p-2 text-[#b24e55] shadow-md"
             aria-label="Next testimonials"
           >
             <svg
@@ -107,7 +107,7 @@ export default function Testimonials() {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="w-8 h-8"
+              className="w-6 h-6 sm:w-8 sm:h-8"
             >
               <path
                 strokeLinecap="round"
@@ -117,55 +117,58 @@ export default function Testimonials() {
             </svg>
           </button>
 
-          <div className="relative bg-gradient-to-t from-[#b45057] to-[#e4656e] rounded-[1.5rem] sm:rounded-[2rem] p-6 sm:p-12 md:p-16 border-8 sm:border-16 border-[#f78f97] min-h-[400px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.25)] overflow-hidden">
+          <div className="relative bg-gradient-to-t from-[#b45057] to-[#e4656e] rounded-[1rem] sm:rounded-[2rem] p-4 sm:p-12 md:p-16 border-4 sm:border-8 md:border-16 border-[#f78f97] min-h-[400px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.25)] overflow-hidden">
             <div className="relative">
               <AnimatePresence mode="wait" custom={direction}>
                 <div className="flex items-center justify-center relative min-h-[300px]">
-                  {/* Previous Card (Left) */}
-                  <motion.div
-                    key={`prev-${currentIndex}`}
-                    custom={direction}
-                    initial={
-                      direction > 0
-                        ? { x: -300, opacity: 0 }
-                        : { x: -150, opacity: 0.5 }
-                    }
-                    animate={{ x: -150, opacity: 0.5 }}
-                    exit={
-                      direction > 0
-                        ? { x: -300, opacity: 0 }
-                        : { x: 0, opacity: 0 }
-                    }
-                    transition={{
-                      type: "tween",
-                      duration: 1,
-                      ease: "easeInOut",
-                    }}
-                    className="absolute left-0 transform blur-sm pointer-events-none"
-                  >
-                    <div className="bg-[#ffedee] rounded-[1rem] p-8 w-96">
-                      <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold text-gray-800">
-                          "
-                          {
-                            testimonials[
-                              (currentIndex - 1 + testimonials.length) %
-                                testimonials.length
-                            ].title
-                          }
-                          "
-                        </h3>
-                        <p className="text-gray-600 text-lg leading-relaxed line-clamp-4">
-                          {
-                            testimonials[
-                              (currentIndex - 1 + testimonials.length) %
-                                testimonials.length
-                            ].quote
-                          }
-                        </p>
+                  {/* Hide previous and next cards on mobile */}
+                  <div className="hidden sm:block">
+                    {/* Previous Card (Left) */}
+                    <motion.div
+                      key={`prev-${currentIndex}`}
+                      custom={direction}
+                      initial={
+                        direction > 0
+                          ? { x: -300, opacity: 0 }
+                          : { x: -150, opacity: 0.5 }
+                      }
+                      animate={{ x: -150, opacity: 0.5 }}
+                      exit={
+                        direction > 0
+                          ? { x: -300, opacity: 0 }
+                          : { x: 0, opacity: 0 }
+                      }
+                      transition={{
+                        type: "tween",
+                        duration: 1,
+                        ease: "easeInOut",
+                      }}
+                      className="absolute left-0 transform blur-sm pointer-events-none"
+                    >
+                      <div className="bg-[#ffedee] rounded-[1rem] p-8 w-96">
+                        <div className="space-y-6">
+                          <h3 className="text-2xl font-semibold text-gray-800">
+                            "
+                            {
+                              testimonials[
+                                (currentIndex - 1 + testimonials.length) %
+                                  testimonials.length
+                              ].title
+                            }
+                            "
+                          </h3>
+                          <p className="text-gray-600 text-lg leading-relaxed line-clamp-4">
+                            {
+                              testimonials[
+                                (currentIndex - 1 + testimonials.length) %
+                                  testimonials.length
+                              ].quote
+                            }
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
+                    </motion.div>
+                  </div>
 
                   {/* Current Card */}
                   <motion.div
@@ -179,13 +182,13 @@ export default function Testimonials() {
                       duration: 1,
                       ease: "easeInOut",
                     }}
-                    className="bg-[#ffedee] rounded-[1rem] p-8 w-[32rem] z-10"
+                    className="bg-[#ffedee] rounded-[1rem] p-4 sm:p-8 w-full sm:w-[32rem] z-10"
                   >
-                    <div className="space-y-6">
-                      <h3 className="text-2xl font-semibold text-gray-800">
+                    <div className="space-y-4 sm:space-y-6">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
                         "{testimonials[currentIndex].title}"
                       </h3>
-                      <p className="text-gray-600 text-lg leading-relaxed">
+                      <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                         {testimonials[currentIndex].quote}
                       </p>
                       <p className="font-semibold text-gray-800">
@@ -194,49 +197,52 @@ export default function Testimonials() {
                     </div>
                   </motion.div>
 
-                  {/* Next Card (Right) */}
-                  <motion.div
-                    key={`next-${currentIndex}`}
-                    custom={direction}
-                    initial={
-                      direction > 0
-                        ? { x: 300, opacity: 0 }
-                        : { x: 150, opacity: 0.5 }
-                    }
-                    animate={{ x: 150, opacity: 0.5 }}
-                    exit={
-                      direction > 0
-                        ? { x: 0, opacity: 0 }
-                        : { x: 300, opacity: 0 }
-                    }
-                    transition={{
-                      type: "tween",
-                      duration: 1,
-                      ease: "easeInOut",
-                    }}
-                    className="absolute right-0 transform blur-sm pointer-events-none"
-                  >
-                    <div className="bg-[#ffedee] rounded-[1rem] p-8 w-96">
-                      <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold text-gray-800">
-                          "
-                          {
-                            testimonials[
-                              (currentIndex + 1) % testimonials.length
-                            ].title
-                          }
-                          "
-                        </h3>
-                        <p className="text-gray-600 text-lg leading-relaxed line-clamp-4">
-                          {
-                            testimonials[
-                              (currentIndex + 1) % testimonials.length
-                            ].quote
-                          }
-                        </p>
+                  {/* Hide previous and next cards on mobile */}
+                  <div className="hidden sm:block">
+                    {/* Next Card (Right) */}
+                    <motion.div
+                      key={`next-${currentIndex}`}
+                      custom={direction}
+                      initial={
+                        direction > 0
+                          ? { x: 300, opacity: 0 }
+                          : { x: 150, opacity: 0.5 }
+                      }
+                      animate={{ x: 150, opacity: 0.5 }}
+                      exit={
+                        direction > 0
+                          ? { x: 0, opacity: 0 }
+                          : { x: 300, opacity: 0 }
+                      }
+                      transition={{
+                        type: "tween",
+                        duration: 1,
+                        ease: "easeInOut",
+                      }}
+                      className="absolute right-0 transform blur-sm pointer-events-none"
+                    >
+                      <div className="bg-[#ffedee] rounded-[1rem] p-8 w-96">
+                        <div className="space-y-6">
+                          <h3 className="text-2xl font-semibold text-gray-800">
+                            "
+                            {
+                              testimonials[
+                                (currentIndex + 1) % testimonials.length
+                              ].title
+                            }
+                            "
+                          </h3>
+                          <p className="text-gray-600 text-lg leading-relaxed line-clamp-4">
+                            {
+                              testimonials[
+                                (currentIndex + 1) % testimonials.length
+                              ].quote
+                            }
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
+                    </motion.div>
+                  </div>
                 </div>
               </AnimatePresence>
             </div>

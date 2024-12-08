@@ -7,6 +7,24 @@ body {
   background-color: #fff7f8;
 }
 
+.PhoneInput {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  padding: 0 0.75rem;
+}
+
+.PhoneInput:focus-within {
+  border-color: black;
+}
+
+.PhoneInputInput {
+  border: none;
+  padding: 0.5rem;
+  outline: none;
+  width: 100%;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
