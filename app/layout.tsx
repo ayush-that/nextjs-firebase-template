@@ -12,7 +12,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${mabryPro.variable} ${roboto.variable}`}>
+    <html
+      lang="en"
+      className={`${mabryPro.variable} ${roboto.variable} scroll-smooth`}
+    >
       <body className="font-roboto">{children}</body>
     </html>
   );
