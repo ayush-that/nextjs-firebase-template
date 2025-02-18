@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Modern Template with Firebase
+
+A highly customizable, production-ready template built with Next.js, Tailwind CSS, and Firebase. Perfect for building modern web applications with features like form handling, database integration, and responsive design.
+
+## Features
+
+- 🚀 Next.js 15 with App Router
+- 🎨 Tailwind CSS with custom animations
+- 🔥 Firebase Firestore integration
+- 📱 Responsive design
+- 📝 Form validation with Zod
+- 📊 Animated components with Framer Motion
+- 📧 Newsletter subscription
+- 📞 Contact form with phone number input
+- 💼 Ready-to-use components (Navbar, Footer, Pricing, etc.)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- Firebase account
+- Google Cloud project
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/nextjs-firebase-template.git
+cd nextjs-firebase-template
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Set Up Firebase
+
+1. Go to the [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project
+3. In the project settings, add a web app
+4. Copy the Firebase configuration object
+
+### 4. Configure Environment Variables
+
+Create a `.env.local` file in the root directory and add your Firebase credentials:
+
+```bash
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-bucket.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+```
+
+### 5. Set Up Firestore
+
+1. In the Firebase Console, go to Firestore Database
+2. Create a new database in production mode
+3. Add the following collections:
+   - `contacts`
+   - `newsletter_subscribers`
+
+### 6. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Vercel Deployment
 
-## Learn More
+1. Install Vercel CLI:
+   ```bash
+   npm i -g vercel
+   ```
+2. Run the following command and follow the prompts:
+   ```bash
+   vercel
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+### Firebase Hosting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Install Firebase CLI:
+   ```bash
+   npm install -g firebase-tools
+   ```
+2. Login to Firebase:
+   ```bash
+   firebase login
+   ```
+3. Initialize Firebase Hosting:
+   ```bash
+   firebase init hosting
+   ```
+4. Build and deploy:
+   ```bash
+   npm run build
+   firebase deploy
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization
 
-## Deploy on Vercel
+### Change Colors
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit the `tailwind.config.ts` file to customize the color scheme:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```ts
+extend: {
+colors: {
+primary: '#b24e55',
+secondary: '#E3405F',
+// Add your custom colors here
+},
+},
+// existing code...
+```
+
+### Modify Components
+
+All components are located in the `components` directory. Key components include:
+
+- `Navbar.tsx` - Customizable navigation bar
+- `Footer.tsx` - Footer component
+- `ContactForm.tsx` - Form with validation
+- `Newsletter.tsx` - Email subscription form
+- `Pricing.tsx` - Pricing section with cards
+- `FAQ.tsx` - Expandable FAQ section
+
+## Support
+
+For support or customization requests, please contact [your email].
+
+## License
+
+This template is available for purchase with a single-site license. For multi-site or extended licenses, please contact us.
+
+---
+
+**Note:** This is a template and requires additional development for production use. The seller is not responsible for any issues arising from the implementation of this template.
