@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const Problem = () => {
   return (
@@ -27,11 +27,16 @@ const Problem = () => {
             <div className="space-y-6">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-mabry font-semibold text-[#403334]">
                 <span className="lg:hidden">
-                  Hunting for roles manually can be <span className="text-[#b24e55]">stressful</span> and <span className="text-[#b24e55]">time-consuming</span>.
+                  Hunting for roles manually can be{' '}
+                  <span className="text-[#b24e55]">stressful</span> and{' '}
+                  <span className="text-[#b24e55]">time-consuming</span>.
                 </span>
                 <span className="hidden lg:inline">
-                  Hunting for roles manually can<br /> be <span className="text-[#b24e55]">stressful</span> and{" "}
-                  <span className="text-[#b24e55]">time-consuming</span>.
+                  Hunting for roles manually can
+                  <br /> be <span className="text-[#b24e55]">
+                    stressful
+                  </span>{' '}
+                  and <span className="text-[#b24e55]">time-consuming</span>.
                 </span>
               </h2>
 
@@ -47,8 +52,14 @@ const Problem = () => {
                     />
                   </div>
                   <p className="text-lg font-light text-[#403334]">
-                    <span className="lg:hidden">Manually applying for roles at multiple places is frustrating.</span>
-                    <span className="hidden lg:inline">Manually applying for roles at multiple places<br /> is frustrating.</span>
+                    <span className="lg:hidden">
+                      Manually applying for roles at multiple places is
+                      frustrating.
+                    </span>
+                    <span className="hidden lg:inline">
+                      Manually applying for roles at multiple places
+                      <br /> is frustrating.
+                    </span>
                   </p>
                 </div>
 
@@ -62,8 +73,13 @@ const Problem = () => {
                     />
                   </div>
                   <p className="text-lg font-light text-[#403334]">
-                    <span className="lg:hidden">Customizing applications repeatedly is time-consuming.</span>
-                    <span className="hidden lg:inline">Customizing applications repeatedly is time-<br /> consuming.</span>
+                    <span className="lg:hidden">
+                      Customizing applications repeatedly is time-consuming.
+                    </span>
+                    <span className="hidden lg:inline">
+                      Customizing applications repeatedly is time-
+                      <br /> consuming.
+                    </span>
                   </p>
                 </div>
 
@@ -77,8 +93,13 @@ const Problem = () => {
                     />
                   </div>
                   <p className="text-lg font-light text-[#403334]">
-                    <span className="lg:hidden">Facing constant rejections can lower your confidence.</span>
-                    <span className="hidden lg:inline">Facing constant rejections can lower your <br /> confidence.</span>
+                    <span className="lg:hidden">
+                      Facing constant rejections can lower your confidence.
+                    </span>
+                    <span className="hidden lg:inline">
+                      Facing constant rejections can lower your <br />{' '}
+                      confidence.
+                    </span>
                   </p>
                 </div>
               </div>

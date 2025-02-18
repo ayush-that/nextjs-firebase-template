@@ -1,9 +1,9 @@
-import "./globals.css";
-import { mabryPro, roboto } from "./fonts";
+import './globals.css';
+import { mabryPro, roboto } from './fonts';
 
 export const metadata = {
-  title: "Hirebuddy - Land your next opportunity",
-  description: "Let AI find and apply to your next job opportunity.",
+  title: 'Hirebuddy - Land your next opportunity',
+  description: 'Let AI find and apply to your next job opportunity.',
 };
 
 export default function RootLayout({

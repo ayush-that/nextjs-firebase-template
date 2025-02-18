@@ -1,11 +1,14 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   return (
     <nav className="w-full py-4 px-6 md:px-8 lg:px-12 flex items-center justify-between bg-[#fff7f8]">
       {/* Logo */}
-      <Link href="/" className="text-[#633b3d] font-sans text-2xl font-bold tracking-tighter">
+      <Link
+        href="/"
+        className="text-[#633b3d] font-sans text-2xl font-bold tracking-tighter"
+      >
         Hirebuddy
       </Link>
 

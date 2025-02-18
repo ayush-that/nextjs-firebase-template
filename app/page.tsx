@@ -1,16 +1,16 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Image from "next/image";
-import Problem from "@/components/Problem";
-import Solution from "@/components/Solution";
-import Meet from "@/components/Meet";
-import Working from "@/components/Working";
-import Pricing from "@/components/Pricing";
-import FAQ from "@/components/FAQ";
-import Newsletter from "@/components/Newsletter";
-import Footer from "@/components/Footer";
-import Testimonials from "@/components/Testimonials";
-import ContactForm from "@/components/ContactForm";
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Image from 'next/image';
+import Problem from '@/components/Problem';
+import Solution from '@/components/Solution';
+import Meet from '@/components/Meet';
+import Working from '@/components/Working';
+import Pricing from '@/components/Pricing';
+import FAQ from '@/components/FAQ';
+import Newsletter from '@/components/Newsletter';
+import Footer from '@/components/Footer';
+import Testimonials from '@/components/Testimonials';
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
   return (

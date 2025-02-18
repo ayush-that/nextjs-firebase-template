@@ -1,43 +1,43 @@
-"use client";
+'use client';
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const testimonials = [
   {
     id: 1,
-    title: "Effortless",
+    title: 'Effortless',
     quote:
-      "I struggled with college placements for months without any interviews. In just two weeks, Hirebuddy got me multiple interviews with zero effort on my part.",
-    author: "Arnab Kundu",
+      'I struggled with college placements for months without any interviews. In just two weeks, Hirebuddy got me multiple interviews with zero effort on my part.',
+    author: 'Arnab Kundu',
   },
   {
     id: 2,
-    title: "Successful",
+    title: 'Successful',
     quote:
       "Hirebuddy's efforts in finding my internship were amazing! After interacting with several companies, I found the perfect fit. Their algorithm works, and the outcomes are fantastic! 10/10 recommended",
-    author: "Charvi Sethi",
+    author: 'Charvi Sethi',
   },
   {
     id: 3,
-    title: "Supportive",
+    title: 'Supportive',
     quote:
-      "Hirebuddy completely changed my job search! It made everything so much easier and within weeks I had interviews lined up. I honestly couldn’t have asked for a better experience!",
-    author: "Raghav Gaur",
+      'Hirebuddy completely changed my job search! It made everything so much easier and within weeks I had interviews lined up. I honestly couldn’t have asked for a better experience!',
+    author: 'Raghav Gaur',
   },
   {
     id: 4,
-    title: "Relieving",
+    title: 'Relieving',
     quote:
-      "Job hunting used to be so stressful, but Hirebuddy made it so much easier. The platform handled everything, and I landed interviews quickly. It was such a relief!",
-    author: "Satyansh Kumar",
+      'Job hunting used to be so stressful, but Hirebuddy made it so much easier. The platform handled everything, and I landed interviews quickly. It was such a relief!',
+    author: 'Satyansh Kumar',
   },
   {
     id: 5,
-    title: "Seamless",
+    title: 'Seamless',
     quote:
-      "Hirebuddy made my job search seamless! From personalized job matches to application tracking, everything was handled effortlessly. I landed interviews fast, and the whole experience was smooth and stress-free!",
-    author: "Vaishnavi Kant",
+      'Hirebuddy made my job search seamless! From personalized job matches to application tracking, everything was handled effortlessly. I landed interviews fast, and the whole experience was smooth and stress-free!',
+    author: 'Vaishnavi Kant',
   },
 ];
 
@@ -67,22 +67,22 @@ export default function Testimonials() {
     enter: (direction: number) => ({
       x: direction > 0 ? 300 : -300,
       opacity: 0,
-      position: "absolute" as const,
+      position: 'absolute' as const,
     }),
     center: {
       x: 0,
       opacity: 1,
-      position: "relative" as const,
+      position: 'relative' as const,
     },
     exit: (direction: number) => ({
       x: direction < 0 ? 300 : -300,
       opacity: 0,
-      position: "absolute" as const,
+      position: 'absolute' as const,
     }),
   };
 
   const swipeTransition = {
-    x: { type: "spring", stiffness: 100, damping: 50 },
+    x: { type: 'spring', stiffness: 100, damping: 50 },
     opacity: { duration: 0.8 },
   };
 
@@ -96,7 +96,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 sm:px-12 relative z-20">
         <h2 className="text-center text-xl sm:text-2xl md:text-4xl font-bold mb-6 sm:mb-8 md:mb-16 text-[#403334]">
           See what our <span className="text-[#b24e55]">customers</span> have
-          <br className="hidden md:block" /> to{" "}
+          <br className="hidden md:block" /> to{' '}
           <span className="text-[#b24e55]">say about us...</span>
         </h2>
 
@@ -153,7 +153,7 @@ export default function Testimonials() {
                 exit={{ opacity: 0, x: -100 }}
                 transition={{
                   duration: 1.5,
-                  ease: "easeOut",
+                  ease: 'easeOut',
                 }}
                 className="hidden sm:block absolute left-[calc(50%-36rem)] top-[0%] -translate-y-1/2 pointer-events-none"
               >
@@ -204,7 +204,7 @@ export default function Testimonials() {
                 exit={{ opacity: 0, x: 100 }}
                 transition={{
                   duration: 1.5,
-                  ease: "easeOut",
+                  ease: 'easeOut',
                 }}
                 className="hidden sm:block absolute right-[calc(50%-36rem)] top-[0%] -translate-y-1/2 pointer-events-none"
               >
@@ -232,15 +232,15 @@ export default function Testimonials() {
                         index > currentIndex
                           ? 1
                           : index < currentIndex
-                          ? -1
-                          : 0,
+                            ? -1
+                            : 0,
                       ]);
                     }
                   }}
                   className={`h-2 rounded-full transition-all ${
                     index === currentIndex
-                      ? "w-8 bg-[#ffedee]"
-                      : "w-2 bg-white/50"
+                      ? 'w-8 bg-[#ffedee]'
+                      : 'w-2 bg-white/50'
                   }`}
                 />
               ))}

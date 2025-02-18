@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
+import { useState } from 'react';
+import Image from 'next/image';
 
 interface FAQItem {
   question: string;
@@ -10,12 +10,12 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "How does HireBuddy personalize my job applications?",
+    question: 'How does HireBuddy personalize my job applications?',
     answer:
-      "HireBuddy uses AI to analyze your CV and preferences, tailoring each application to match the specific job requirements and company culture. This personalization increases your chances of getting noticed by recruiters.",
+      'HireBuddy uses AI to analyze your CV and preferences, tailoring each application to match the specific job requirements and company culture. This personalization increases your chances of getting noticed by recruiters.',
   },
   {
-    question: "Can I use Hirebuddy for both jobs and internships?",
+    question: 'Can I use Hirebuddy for both jobs and internships?',
     answer:
       "Yes! HireBuddy supports applications for both full-time positions and internships. Our platform adapts the application process based on the type of opportunity you're pursuing.",
   },
@@ -25,17 +25,19 @@ const faqs: FAQItem[] = [
       "Each plan includes different levels of access to our job board, application limits, and support features. Check our pricing section for detailed information about what's included in Gold, Platinum, and Diamond plans.",
   },
   {
-    question: "How does the outbound reach feature work?",
+    question: 'How does the outbound reach feature work?',
     answer:
-      "Our outbound reach feature automatically sends personalized emails to recruiters and hiring managers on your behalf, increasing your visibility and chances of landing interviews.",
+      'Our outbound reach feature automatically sends personalized emails to recruiters and hiring managers on your behalf, increasing your visibility and chances of landing interviews.',
   },
   {
-    question: "Is my data secure with HireBuddy?",
-    answer: "Yes, we take data security seriously. All your personal information and documents are encrypted and stored securely. We comply with data protection regulations and never share your information without your consent.",
+    question: 'Is my data secure with HireBuddy?',
+    answer:
+      'Yes, we take data security seriously. All your personal information and documents are encrypted and stored securely. We comply with data protection regulations and never share your information without your consent.',
   },
   {
-    question: "How quickly can I start applying for jobs?",
-    answer: "You can start applying for jobs immediately after creating your account and uploading your CV. Our AI system processes your information within minutes, allowing you to begin sending personalized applications right away.",
+    question: 'How quickly can I start applying for jobs?',
+    answer:
+      'You can start applying for jobs immediately after creating your account and uploading your CV. Our AI system processes your information within minutes, allowing you to begin sending personalized applications right away.',
   },
 ];
 
@@ -83,12 +85,12 @@ const FAQ = () => {
                     {faq.question}
                   </span>
                   <span className="text-3xl text-[#5f4f50] transform transition-transform duration-200">
-                    {openIndex === index ? "−" : "+"}
+                    {openIndex === index ? '−' : '+'}
                   </span>
                 </button>
                 <div
                   className={`px-6 transition-all duration-200 ease-in-out ${
-                    openIndex === index ? "max-h-48 py-4" : "max-h-0"
+                    openIndex === index ? 'max-h-48 py-4' : 'max-h-0'
                   } overflow-hidden`}
                 >
                   <p className="text-[#4A3D55]">{faq.answer}</p>

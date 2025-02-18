@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 
 const pricingData = [
   {
-    tier: "All-in-one-Plan",
+    tier: 'All-in-one-Plan',
     description:
-      "For active job seekers aiming for more reach and tailored applications.",
-    price: "99",
+      'For active job seekers aiming for more reach and tailored applications.',
+    price: '99',
     features: [
-      "100 job applications/month",
-      "Guaranteed Interview Call",
-      "Application Tracker",
-      "Tailored resume & Cover Letter",
-      "Priority customer support",
+      '100 job applications/month',
+      'Guaranteed Interview Call',
+      'Application Tracker',
+      'Tailored resume & Cover Letter',
+      'Priority customer support',
     ],
-    imagePath: "/pricing/platinum.png",
+    imagePath: '/pricing/platinum.png',
     popular: true,
   },
 ];
@@ -100,8 +100,8 @@ export default function Pricing() {
                 <button
                   onClick={() => {
                     document
-                      .getElementById("contact")
-                      ?.scrollIntoView({ behavior: "smooth" });
+                      .getElementById('contact')
+                      ?.scrollIntoView({ behavior: 'smooth' });
                   }}
                   className="w-full py-4 px-6 rounded-lg font-medium bg-gradient-to-t from-[#f9b6bc] to-[#fffcfd] text-[#8f5055] transition-colors duration-200"
                 >

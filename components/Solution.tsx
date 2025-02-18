@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const Solution = () => {
   return (
@@ -10,7 +10,7 @@ const Solution = () => {
 
       {/* Heading */}
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-mabry font-semibold text-white text-center max-w-4xl mb-16">
-        Experience a hassle-free way to secure your{" "}
+        Experience a hassle-free way to secure your{' '}
         <span className="underline decoration-4 underline-offset-8">
           dream role
         </span>
@@ -31,7 +31,7 @@ const Solution = () => {
               />
             </div>
             <p className="text-lg font-light text-[#403334]">
-              Save time on applications and invest{" "}
+              Save time on applications and invest{' '}
               <span className="hidden md:inline">
                 <br />
               </span>
@@ -50,7 +50,7 @@ const Solution = () => {
               />
             </div>
             <p className="text-lg font-light text-[#403334]">
-              Stand out with tailored applications{" "}
+              Stand out with tailored applications{' '}
               <span className="hidden md:inline">
                 <br />
               </span>
@@ -69,7 +69,7 @@ const Solution = () => {
               />
             </div>
             <p className="text-lg font-light text-[#403334]">
-              Feel secure knowing your job search{" "}
+              Feel secure knowing your job search{' '}
               <span className="hidden md:inline">
                 <br />
               </span>

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 const Hero = () => {
   return (
@@ -19,7 +19,7 @@ const Hero = () => {
 
       {/* Main heading */}
       <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-mabry font-semibold text-[#403334] max-w-4xl mb-6">
-        Land your <span className="text-[#b24e55]">next opportunity</span>{" "}
+        Land your <span className="text-[#b24e55]">next opportunity</span>{' '}
         without lifting a finger.
       </h1>
 
@@ -40,7 +40,7 @@ const Hero = () => {
           />
           <Button
             className="h-14 px-8 text-lg font-normal rounded-xl bg-gradient-to-t from-[#b24e55] to-[#E3405F] hover:opacity-90 text-white whitespace-nowrap"
-            onClick={() => (window.location.href = "#contact")}
+            onClick={() => (window.location.href = '#contact')}
           >
             Find your next role
             <svg

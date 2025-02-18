@@ -1,32 +1,32 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 // Define the steps data
 const steps = [
   {
     number: 1,
-    title: "Upload your CV and preferences",
+    title: 'Upload your CV and preferences',
     description:
-      "Start by uploading your CV and sharing your job preferences. This helps us understand your skills and goals, so we can match you with the right opportunities.",
-    image: "/working/working1.png",
+      'Start by uploading your CV and sharing your job preferences. This helps us understand your skills and goals, so we can match you with the right opportunities.',
+    image: '/working/working1.png',
   },
   {
     number: 2,
-    title: "AI-Powered Matching",
+    title: 'AI-Powered Matching',
     description:
-      "Our advanced AI analyzes your profile and matches you with relevant job opportunities across multiple platforms, saving you hours of manual searching.",
-    image: "/working/working2.png",
+      'Our advanced AI analyzes your profile and matches you with relevant job opportunities across multiple platforms, saving you hours of manual searching.',
+    image: '/working/working2.png',
   },
   {
     number: 3,
-    title: "Automated Applications",
+    title: 'Automated Applications',
     description:
-      "We automatically submit tailored applications to matched positions, handling the entire process while keeping you updated on the progress.",
-    image: "/working/working3.png",
+      'We automatically submit tailored applications to matched positions, handling the entire process while keeping you updated on the progress.',
+    image: '/working/working3.png',
   },
 ];
 
@@ -58,7 +58,7 @@ const Working = () => {
 
   // Simplify the button click handler
   const handleClick = () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -152,8 +152,8 @@ const Working = () => {
                       className="h-10 sm:h-12 px-6 sm:px-8 text-base sm:text-lg font-normal rounded-md bg-gradient-to-t from-[#f9b6bc] to-[#fffcfd] text-[#8f5055] hover:bg-white/90"
                     >
                       {currentStep < steps.length - 1
-                        ? "Next Step"
-                        : "Try it yourself"}
+                        ? 'Next Step'
+                        : 'Try it yourself'}
                     </Button>
                   </div>
                 </motion.div>
