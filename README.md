@@ -1,6 +1,11 @@
 # Next.js Modern Template with Firebase
 
-![{41602E08-84AA-4E81-9C0C-5776007BE469}](https://github.com/user-attachments/assets/b21258dd-982c-402d-942b-18eb8b9d3582)
+![Hero Image](https://github.com/user-attachments/assets/b21258dd-982c-402d-942b-18eb8b9d3582)
+
+| ![Feature 1](https://github.com/user-attachments/assets/9fca83ab-fa4c-4085-8a68-a18b942e96c9) | ![Feature 2](https://github.com/user-attachments/assets/77db9228-c6a7-4c00-9000-030fa3acec30) | ![Feature 3](https://github.com/user-attachments/assets/8c84832c-037e-4c10-b453-88cf9e84958b) |
+|---------------------------|---------------------------|---------------------------|
+| ![Feature 4](https://github.com/user-attachments/assets/9d5aab5c-7c80-4234-b968-7e5ebfa2debd) | ![Feature 5](https://github.com/user-attachments/assets/b1161a0b-7a15-41d0-917d-d21b2d82ffc0) | ![Feature 6](https://github.com/user-attachments/assets/fc512e7b-e023-4968-a78f-e1ac782f2596) |
+| ![Feature 7](https://github.com/user-attachments/assets/482bf366-cef5-4ce0-a8ac-9afaaf7ec578) | ![Feature 5](https://github.com/user-attachments/assets/4cb51fb2-03d3-4d11-8637-fb8daf57d72d) | ![Feature 6](https://github.com/user-attachments/assets/16c24a51-29a4-489b-bf07-1e937130b575) |
 
 A highly customizable, production-ready template built with Next.js, Tailwind CSS, and Firebase. Perfect for building modern web applications with features like form handling, database integration, and responsive design.
 
