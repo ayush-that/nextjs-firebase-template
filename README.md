@@ -1,5 +1,7 @@
 # Next.js Modern Template with Firebase
 
+![{41602E08-84AA-4E81-9C0C-5776007BE469}](https://github.com/user-attachments/assets/b21258dd-982c-402d-942b-18eb8b9d3582)
+
 A highly customizable, production-ready template built with Next.js, Tailwind CSS, and Firebase. Perfect for building modern web applications with features like form handling, database integration, and responsive design.
 
 ## Features
